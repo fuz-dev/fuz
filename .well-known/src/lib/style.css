@@ -1,0 +1,902 @@
+/*
+
+A CSS Fuz theme file like `@fuz.dev/fuz/theme.css`
+is expected to be imported alongside this one
+containing the base variable declarations.
+By default that's the `'base'` theme's variables,
+which is generated from the default values in `@fuz.dev/fuz/variables.js`.
+
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	/* reset all spacings - use `.prose` to give common elements good defaults */
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: 62.5%; /* see `body.font-size`, using `rem` font size units with a base 16px */
+	/* @source https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+html,
+.themed {
+	background-color: var(--bg);
+	color: var(--text_color);
+	accent-color: var(--color_2);
+	line-height: var(--line_height);
+	tab-size: 2;
+}
+
+html.dark {
+	color-scheme: dark; /* override for the meta tag set by `createThemeSetupHtml` */
+}
+
+body {
+	min-height: 100vh;
+	font-size: 1.6rem; /* same value as the default `--size_md`, but this one shouldn't vary */
+	font-family: var(--font_family);
+}
+
+::selection {
+	background: hsla(var(--hue_1), 80%, 80%, var(--faded_3));
+}
+
+/*
+Keep hidden behavior when `display` is set.
+@source https://github.com/jensimmons/cssremedy
+*/
+[hidden] {
+	display: none;
+}
+
+/* TODO what about .themed? */
+@media (prefers-reduced-motion) {
+	:root {
+		/* setting to `initial` disables animations but allows for fallbacks (see PendingAnimation)  */
+		--duration_6: initial;
+		--duration_5: initial;
+		--duration_4: initial;
+		--duration_3: initial;
+		--duration_2: initial;
+		--duration_1: initial;
+	}
+}
+
+aside {
+	border-left-color: var(--border_color);
+	border-left-style: var(--border_style);
+	border-left-width: var(--border_width_3);
+	border-radius: var(--border_radius_xs);
+	padding: var(--spacing_md);
+	color: var(--color, var(--text_2));
+	background-color: var(--fg_1);
+}
+aside:hover {
+	border-left-color: var(--border_4);
+}
+
+blockquote {
+	border-radius: var(--border_radius_xs);
+	padding: var(--spacing_md);
+	color: var(--color, var(--text_2));
+	background-color: var(--fg_1);
+}
+
+code {
+	font-family: var(--font_family_mono);
+	font-weight: 600;
+	-webkit-hyphens: none;
+	hyphens: none;
+	color: var(--color, var(--text_2));
+	background-color: var(--fg_1);
+	padding: 0 var(--spacing_xs2);
+	border-radius: var(--border_radius_xs);
+}
+
+pre {
+	/* @see https://developer.mozilla.org/en-US/docs/Web/CSS/white-space#break-spaces */
+	/* TODO check for `Code` before adding this - white-space: break-spaces; */
+	font-family: var(--font_family_mono);
+	color: var(--color, var(--text_2));
+	overflow: auto;
+	max-width: 100%;
+}
+
+pre > code {
+	font-size: var(--size_sm);
+	font-weight: 500;
+}
+
+a {
+	display: flex;
+	cursor: pointer;
+	--color: var(--link_color);
+	color: var(--color);
+	font-weight: 700;
+	text-decoration: var(--text_decoration);
+	border-radius: var(--border_radius_xs2);
+	outline: var(--outline_width) var(--outline_style) var(--outline_color);
+}
+a:hover {
+	text-decoration: var(--text_decoration_hover);
+}
+a:focus {
+	--outline_width: var(--outline_width_2);
+}
+a:active {
+	--outline_width: var(--outline_width_3);
+}
+a.selected {
+	--color: var(--link_active);
+	--outline_color: var(--border_color);
+	text-decoration: var(--text_decoration_selected);
+}
+a.selected:active {
+	--outline_color: var(--border_color);
+}
+
+ul,
+ol,
+menu {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+li {
+	display: flex;
+}
+
+h1 {
+	font-size: var(--size_3);
+	font-weight: 300;
+}
+h2 {
+	font-size: var(--size_2);
+	font-weight: 400;
+}
+h3 {
+	font-size: var(--size_1);
+	font-weight: 500;
+}
+h4 {
+	font-size: var(--size_lg);
+	font-weight: 700;
+}
+h5 {
+	font-size: var(--size_md);
+	font-weight: 900;
+}
+h6 {
+	font-size: var(--size_sm);
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+hr {
+	border-top: 1px solid var(--border_3);
+	border-bottom: 2px solid var(--border_3);
+	border-left: none;
+	border-right: none;
+	width: 100%;
+	height: 5px;
+	margin: var(--spacing_5) 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	border: 0;
+}
+
+legend {
+	font-size: var(--size_1);
+	margin-bottom: var(--spacing_lg);
+}
+
+input,
+textarea,
+select {
+	-webkit-appearance: none;
+	appearance: none;
+	font: inherit;
+	line-height: normal;
+	color: var(--text_color);
+	background: var(--input_bg);
+	border-color: var(--border_color);
+	border-style: var(--border_style);
+	border-width: var(--border_width);
+	border-radius: var(--border_radius);
+	outline: var(--outline_width) var(--outline_style) var(--outline_color);
+	padding: var(--input_padding_y) var(--input_padding_x);
+	width: 100%;
+	min-width: var(--input_width_min);
+	min-height: var(--input_height);
+}
+
+textarea {
+	--input_padding_y: var(--spacing_sm);
+	height: 100px;
+}
+
+select,
+option,
+input[type='color'] {
+	cursor: pointer;
+}
+
+option {
+	color: var(--text_color);
+	background-color: var(--bg);
+}
+
+:is(input, textarea, select):hover {
+	--border_color: var(--border_2);
+}
+
+/* these have no active states because they feel buggy in the browsers,
+because the active state only applies when the thumb is clicked directly,
+but not for the identical user action of clicking the track,
+so for consistent visuals we opt to include no active state */
+input[type='checkbox'] {
+	cursor: pointer;
+	width: var(--input_height_sm);
+	height: var(--input_height_sm);
+	min-width: var(--input_height_sm);
+	min-height: var(--input_height_sm);
+	--border_radius: var(--border_radius_xs);
+	--input_padding_x: 0;
+	--content_default: '✓';
+	---content: var(--content_empty, '');
+}
+input[type='checkbox']:checked {
+	/* ✓ ✗ ✘ */
+	---content: var(--content, var(--content_default));
+}
+input[type='checkbox']::before {
+	content: var(---content);
+	position: relative;
+	left: var(--left);
+	top: var(--top);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: normal;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: var(--overflow, visible);
+	font-size: var(--font_size, var(--size_3));
+	color: var(--text_color);
+}
+
+input[type='radio'] {
+	cursor: pointer;
+	width: var(--input_height_sm);
+	height: var(--input_height_sm);
+	min-width: var(--input_height_sm);
+	min-height: var(--input_height_sm);
+	--input_padding_x: 0;
+}
+input[type='radio']:checked::before {
+	content: '';
+	display: block;
+	position: relative;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	background-color: var(--text_color);
+	border-radius: 50%;
+}
+
+input[type='range'] {
+	--thumb_size: var(--spacing_1);
+	--thumb_background_color: var(--text_2);
+	cursor: pointer;
+}
+input[type='range']:hover {
+	--thumb_background_color: var(--color_1);
+}
+input[type='range']:disabled {
+	--thumb_background_color: var(--text_disabled);
+}
+input[type='range']:disabled:active {
+	--thumb_background_color: var(--color_5);
+}
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	height: var(--thumb_size);
+	width: var(--thumb_size);
+	border-radius: var(--border_radius);
+	background-color: var(--thumb_background_color);
+	border: 0;
+	/*
+
+	this is the only line that differs between the `moz` one
+	CSS stops parsing if it hits an unknown selector like `::-moz-range-thumb` in Webkit/Blink,
+	so we need both declarations anyway, and the declarations can't be combined with plain CSS,
+	one of the few times I've wanted to reach for PostCSS
+
+	*/
+	margin-top: calc(var(--thumb_size) / -2);
+}
+input[type='range']::-moz-range-thumb {
+	appearance: none;
+	height: var(--thumb_size);
+	width: var(--thumb_size);
+	border-radius: var(--border_radius);
+	background-color: var(--thumb_background_color);
+	border: 0;
+}
+input[type='range']::-webkit-slider-runnable-track {
+	width: 100%;
+	height: var(--border_width);
+	background-color: var(--thumb_background_color);
+}
+input[type='range']::-moz-range-track {
+	width: 100%;
+	height: var(--border_width);
+	background-color: var(--thumb_background_color);
+}
+
+:is(input, select).inline {
+	display: inline-block;
+	margin-left: var(--spacing_lg);
+	/* TODO ideally `width` here would be set to a minimum and have an API to increase size --
+	buttons can grow automatically, but how can inputs? only with js?
+	 */
+	width: var(--input_width_min);
+}
+
+.buttonlike {
+	cursor: pointer;
+	position: relative;
+	outline: var(--outline_width) var(--outline_style) var(--outline_color);
+	border-radius: var(--border_radius);
+	border-width: var(--border_width);
+	border-style: var(--border_style);
+	border-color: var(--border_color);
+}
+
+:is(button, input, textarea, select):focus,
+.buttonlike:focus,
+.buttonlike:focus-within {
+	--border_color: var(--color_1);
+	--outline_color: var(--color_1);
+	--outline_width: var(--outline_width_2);
+}
+
+:is(input, textarea, select):active,
+.buttonlike:active,
+.buttonlike:active :is(input, textarea) {
+	--outline_width: var(--outline_width_3);
+}
+
+button {
+	--text_color: var(--text_2);
+	--min_height: var(--input_height);
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	font: inherit;
+	font-weight: 700;
+	line-height: normal;
+	color: var(--text_color);
+	min-height: var(--min_height);
+	padding: 0 var(--input_padding_x);
+	background: var(--button_bg);
+	border-width: var(--border_width);
+	border-style: var(--border_style);
+	border-color: var(--border_color);
+	border-radius: var(--border_radius);
+	outline: var(--outline_width) var(--outline_style) var(--outline_color);
+}
+button:hover,
+button:focus,
+.buttonlike:hover,
+.buttonlike:focus {
+	--border_color: var(--border_2);
+	background: var(--button_bg_hover);
+}
+button:active,
+.buttonlike:active {
+	--border_color: var(--border_5);
+	--outline_width: var(--outline_width_3);
+	/* TODO use of `background` vs `background-color` in this file is not intentional */
+	background: var(--button_bg_active);
+}
+button.inline {
+	display: inline-block;
+	margin-left: var(--spacing_sm);
+	margin-right: var(--spacing_sm);
+}
+/*  TODO :has selector? `.buttonlike:has(input[type='checkbox']:checked)`
+see https://caniuse.com/css-has
+ */
+/* TODO maybe add a style for `button.selected:disabled`, probably reduced brightness,
+currently `:disabled` overrides this */
+button.selected,
+.buttonlike.selected {
+	--text_color: var(--text_active);
+	--border_color: var(--color_1);
+	background: var(--button_bg_active);
+	cursor: default;
+}
+input:checked,
+.buttonlike:hover input:checked:not(:disabled),
+.buttonlike:focus input:checked {
+	--text_color: var(--text_active);
+	--border_color: var(--color_1);
+}
+input[type='radio']:checked {
+	cursor: default;
+}
+:is(input, textarea, select, button):disabled,
+.buttonlike.disabled {
+	--text_color: var(--text_disabled);
+	--border_color: var(--border_disabled);
+	--border_style: solid dashed;
+	cursor: default;
+	opacity: var(--disabled_opacity);
+	background: var(--button_bg_disabled);
+	outline: none;
+}
+:is(input, textarea, select, button):disabled:active,
+.buttonlike.disabled:active,
+label.disabled:active {
+	--border_color: var(--color_5);
+	--text_color: var(--color_5);
+}
+.buttonlike:active :is(input[type='checkbox'], input[type='radio']):disabled {
+	--border_color: var(--color_5);
+	background: var(--button_bg_disabled);
+}
+
+/* TODO could improve this with the coming `:has` selector
+for disabled colors without needing a wrapper .disabled class */
+label {
+	color: var(--text_color);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+label .title {
+	font-weight: 600;
+}
+label.selected {
+	cursor: default;
+	--text_color: var(--text_active);
+}
+label.disabled {
+	cursor: default;
+	--text_color: var(--text_disabled);
+}
+label.row {
+	justify-content: flex-start;
+	align-items: center;
+}
+label.row :is(input[type='checkbox'], input[type='radio']) {
+	margin-right: var(--spacing_md);
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+}
+nav button {
+	flex: 1;
+}
+
+small {
+	font-size: var(--size_sm);
+}
+
+img,
+picture,
+canvas,
+svg,
+video {
+	display: block;
+	max-width: 100%; /* shrink to fit */
+	height: auto; /* preserve aspect ratio */
+}
+
+audio {
+	width: 100%;
+}
+
+summary {
+	cursor: pointer;
+	padding: var(--spacing_md);
+	border-radius: var(--border_radius_xs);
+}
+summary:hover {
+	background-color: var(--fg_1);
+}
+summary:active {
+	background-color: var(--fg_2);
+}
+
+/* TODO where to put table styles? currently no others */
+thead {
+	text-align: left;
+}
+
+/*
+
+^ that's the end of styles for default HTML/SVG tags
+
+ahead are utility and helper classes:
+
+*/
+
+.relative {
+	position: relative;
+}
+
+.inline {
+	display: inline;
+}
+.inline_block {
+	display: inline-block;
+}
+.block {
+	display: block;
+}
+.flex {
+	display: flex;
+}
+.flex_1 {
+	flex: 1;
+}
+
+/* A pane is a box floating over the page, like for dialogs.
+By default it's opaque, resetting the background to the initial depth. */
+.pane {
+	background-color: var(--pane_bg, var(--bg));
+	/* TODO this causes blurriness with nested contextmenus, maybe they shouldn't be panes? is pane overloaded? maybe extract the bg part of it?
+	filter: var(--drop_shadow); */
+	box-shadow: var(--box_shadow);
+	border-radius: var(--border_radius_xs);
+}
+/* A panel is a box embedded into the page, useful for visually isolating content. */
+.panel {
+	border-radius: var(--border_radius_sm);
+	background-color: var(--panel_bg, var(--fg_1));
+}
+
+/*
+The name `.prose` was copied from Tailwind's @tailwindcss/typography -
+https://tailwindcss.com/docs/typography-plugin
+In Fuz it means "document-like typographic markup" distinct from the rest of the page's markup.
+An example is `ul`s - inside `.prose` they have visible bullet points, but they don't by default.
+MDN's documented content categories didn't match the intent:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories
+*/
+.prose {
+	line-height: var(--line_height_4);
+	overflow-wrap: break-word; /* @see https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap#break-word */
+}
+.prose :is(h1, h2, h3, h4, h5, h6) {
+	line-height: var(--line_height_3);
+	text-wrap: balance; /* @see https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#balance */
+}
+.prose h1 {
+	margin: var(--spacing_2) 0;
+}
+.prose h2 {
+	margin: var(--spacing_1) 0;
+}
+.prose h3 {
+	margin: var(--spacing_lg) 0;
+}
+.prose h4 {
+	margin: var(--spacing_md) 0;
+}
+.prose h5 {
+	margin: var(--spacing_sm) 0;
+}
+.prose h6 {
+	margin: var(--spacing_xs) 0;
+}
+.prose :is(ul, ol, menu) {
+	padding-left: var(--spacing_4);
+	list-style: initial;
+}
+.prose ol {
+	list-style: decimal;
+}
+.prose li {
+	display: list-item;
+}
+.prose a {
+	display: inline;
+}
+.prose section {
+	margin-bottom: var(--spacing_4);
+}
+/* checkboxes and radios are expected to be nested inside a `label`, thus no bottom margin */
+.prose
+	:is(
+		p,
+		ul,
+		ol,
+		menu,
+		form,
+		fieldset,
+		table,
+		details,
+		textarea,
+		select,
+		label,
+		pre,
+		blockquote,
+		aside
+	):not(:last-child) {
+	margin-bottom: var(--spacing_lg);
+}
+/* TODO others with a smaller margin? */
+.prose summary:not(:last-child) {
+	/* TODO maybe change API to like `--margin_bottom`? */
+	margin-bottom: var(--spacing_xs);
+}
+
+.selectable {
+	cursor: pointer;
+	background-color: var(--button_bg);
+	border-color: var(--border_3);
+	border-style: var(--border_style);
+	border-width: var(--border_width);
+}
+.selectable:hover {
+	background-color: var(--button_bg_hover);
+	border-color: var(--border_2);
+}
+.selectable.selected,
+.selectable:active {
+	background-color: var(--button_bg_active);
+	border-color: var(--color_1);
+}
+.selectable.selected {
+	cursor: default;
+}
+.selected.deselectable:not(:disabled) {
+	cursor: pointer;
+}
+
+.ellipsis {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.pixelated {
+	image-rendering: -webkit-optimize-contrast; /* Safari */
+	image-rendering: -o-crisp-edges; /* OS X & Windows Opera (12.02+) */
+	image-rendering: pixelated; /* in case crisp-edges isn't supported */
+	image-rendering: crisp-edges; /* the recommended pixel art setting according to MDN */
+}
+
+.width_full {
+	width: 100%;
+}
+
+.height_full {
+	height: 100%;
+}
+
+.width_md {
+	width: 100%;
+	max-width: var(--width_md);
+}
+
+.width_sm {
+	width: 100%;
+	max-width: var(--width_sm);
+}
+
+.text_align_center {
+	text-align: center;
+}
+.text_align_right {
+	text-align: right;
+}
+.text_align_left {
+	text-align: left;
+}
+.text_align_justify {
+	text-align: justify;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* can be used to override the direction of a `.box` */
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+/* Makes flexboxes wrap. */
+.wrap {
+	flex-wrap: wrap;
+}
+
+/* Stops text from wrapping. */
+.nowrap {
+	white-space: nowrap;
+}
+
+/* Formats content to wrap long strings and preserve displayed whitespace. */
+.formatted {
+	overflow: hidden;
+	white-space: break-spaces;
+}
+
+.spaced {
+	margin-bottom: var(--spacing_lg);
+}
+.spaced_hz {
+	margin-right: var(--spacing_lg);
+}
+/* the extra `.prose` selectors are needed for specificity to override the above styles */
+.unspaced,
+.prose .unspaced {
+	margin-bottom: 0;
+}
+.unspaced_hz {
+	margin-right: 0;
+}
+
+.padded_xs {
+	padding: var(--spacing_xs);
+}
+.padded_sm {
+	padding: var(--spacing_sm);
+}
+.padded_md {
+	padding: var(--spacing_md);
+}
+.padded_lg {
+	padding: var(--spacing_lg);
+}
+.padded_1 {
+	padding: var(--spacing_1);
+}
+.padded_2 {
+	padding: var(--spacing_2);
+}
+.padded_3 {
+	padding: var(--spacing_3);
+}
+.padded_4 {
+	padding: var(--spacing_4);
+}
+.padded_5 {
+	padding: var(--spacing_5);
+}
+
+/* use `reverse` to fade out and `alternate` to flash */
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* TODO other button variants? */
+/* TODO this is slightly strange that it doesn't use --icon_size */
+.icon_button {
+	width: var(--input_height);
+	height: var(--input_height);
+	min-width: var(--input_height);
+	min-height: var(--input_height);
+	flex-shrink: 0;
+	font-weight: 900;
+	padding: 0;
+}
+.plain {
+	border: none;
+	box-shadow: none;
+	--button_bg: transparent;
+}
+
+.menu_item {
+	--border_radius: 0;
+	--border_color: var(--border_3);
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	min-height: var(--min_height, var(--icon_size_sm));
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(
+		--menu_item_padding,
+		var(--spacing_xs3) var(--spacing_xs3) var(--spacing_xs3) var(--spacing_xs)
+	);
+}
+.menu_item.selected {
+	/* TODO different patterns for border and bg? */
+	--border_color: var(--color_1);
+	background-color: var(--fg_1);
+	z-index: 1;
+}
+.menu_item.plain {
+	border: none;
+}
+.menu_item .content {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	/* allows the flex children to shrink */
+	min-width: 0;
+}
+.menu_item .icon {
+	width: var(--icon_size);
+	margin-right: var(--spacing_xs);
+	flex-shrink: 0;
+	text-align: center;
+	font-weight: 900;
+}
+.menu_item .title {
+	margin-right: var(--spacing_lg);
+	flex-shrink: 1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: var(--line_height_6); /* prevents the bottom of g's and others from being cut off */
+}
+
+/* TODO change to SVG? or use CSS vars for size and color? rename to indicate it's facing right? */
+.chevron {
+	position: relative;
+	height: 8px;
+}
+.chevron::before {
+	display: block;
+	content: '';
+	border: 4px solid transparent;
+	border-left-color: var(--text_2);
+}
+
+.chip {
+	font-size: var(--font_size_sm);
+	font-weight: 600;
+	padding: var(--spacing_xs4) var(--spacing_sm);
+	background-color: var(--darken_1);
+	border-radius: var(--border_radius_xs);
+}
+a.chip {
+	font-weight: 700;
+}

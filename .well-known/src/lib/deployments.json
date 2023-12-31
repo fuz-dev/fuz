@@ -1,0 +1,1107 @@
+[
+	{
+		"url": "https://www.fuz.dev/",
+		"package_json": {
+			"name": "@fuz.dev/fuz",
+			"version": "0.81.0",
+			"description": "design system for CSS, Svelte, and SvelteKit",
+			"icon": "🧶",
+			"public": true,
+			"license": "MIT",
+			"homepage": "https://www.fuz.dev/",
+			"author": {
+				"name": "Ryan Atkinson",
+				"email": "mail@ryanatkn.com",
+				"url": "https://www.ryanatkn.com/"
+			},
+			"repository": {"type": "git", "url": "git+https://github.com/fuz-dev/fuz.git"},
+			"bugs": {"url": "https://github.com/fuz-dev/fuz/issues", "email": "mail@ryanatkn.com"},
+			"type": "module",
+			"engines": {"node": ">=20.10"},
+			"scripts": {
+				"dev": "gro dev",
+				"build": "gro build",
+				"deploy": "gro deploy",
+				"start": "gro start",
+				"test": "gro test"
+			},
+			"files": ["dist"],
+			"peerDependencies": {"svelte": "*"},
+			"devDependencies": {
+				"@changesets/changelog-git": "^0.2.0",
+				"@feltjs/eslint-config": "^0.4.1",
+				"@fuz.dev/fuz_code": "^0.5.0",
+				"@fuz.dev/fuz_dialog": "^0.6.0",
+				"@fuz.dev/fuz_library": "^0.23.0",
+				"@grogarden/gro": "^0.107.1",
+				"@ryanatkn/orc": "^0.17.0",
+				"@sveltejs/adapter-static": "^3.0.1",
+				"@sveltejs/kit": "^2.0.4",
+				"@sveltejs/package": "^2.2.4",
+				"@sveltejs/vite-plugin-svelte": "^3.0.1",
+				"@types/prismjs": "^1.26.3",
+				"@typescript-eslint/eslint-plugin": "^6.15.0",
+				"@typescript-eslint/parser": "^6.15.0",
+				"eslint": "^8.56.0",
+				"eslint-plugin-svelte": "^2.35.1",
+				"prettier": "^3.1.1",
+				"prettier-plugin-svelte": "^3.1.2",
+				"prism-svelte": "^0.5.0",
+				"prismjs": "^1.29.0",
+				"svelte": "^4.2.8",
+				"svelte-check": "^3.6.2",
+				"tslib": "^2.6.2",
+				"typescript": "^5.3.3",
+				"uvu": "^0.5.6"
+			},
+			"eslintConfig": {"root": true, "extends": "@feltjs", "rules": {"no-console": 1}},
+			"prettier": {
+				"plugins": ["prettier-plugin-svelte"],
+				"useTabs": true,
+				"printWidth": 100,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"overrides": [{"files": "package.json", "options": {"useTabs": false}}]
+			},
+			"exports": {
+				"./Color_Scheme_Input.svelte": {
+					"svelte": "./dist/Color_Scheme_Input.svelte",
+					"default": "./dist/Color_Scheme_Input.svelte",
+					"types": "./dist/Color_Scheme_Input.svelte.d.ts"
+				},
+				"./deployments.json": {
+					"default": "./dist/deployments.json",
+					"types": "./dist/deployments.json.d.ts"
+				},
+				"./deployments.task.js": {
+					"default": "./dist/deployments.task.js",
+					"types": "./dist/deployments.task.d.ts"
+				},
+				"./orc.task.js": {"default": "./dist/orc.task.js", "types": "./dist/orc.task.d.ts"},
+				"./style.css": {"default": "./dist/style.css"},
+				"./swallow.js": {"default": "./dist/swallow.js", "types": "./dist/swallow.d.ts"},
+				"./Theme_Input.svelte": {
+					"svelte": "./dist/Theme_Input.svelte",
+					"default": "./dist/Theme_Input.svelte",
+					"types": "./dist/Theme_Input.svelte.d.ts"
+				},
+				"./theme.css": {"default": "./dist/theme.css"},
+				"./theme.gen.css.js": {
+					"default": "./dist/theme.gen.css.js",
+					"types": "./dist/theme.gen.css.d.ts"
+				},
+				"./theme.js": {"default": "./dist/theme.js", "types": "./dist/theme.d.ts"},
+				"./Themed_Scope.svelte": {
+					"svelte": "./dist/Themed_Scope.svelte",
+					"default": "./dist/Themed_Scope.svelte",
+					"types": "./dist/Themed_Scope.svelte.d.ts"
+				},
+				"./Themed.svelte": {
+					"svelte": "./dist/Themed.svelte",
+					"default": "./dist/Themed.svelte",
+					"types": "./dist/Themed.svelte.d.ts"
+				},
+				"./themes.js": {"default": "./dist/themes.js", "types": "./dist/themes.d.ts"},
+				"./variables.js": {"default": "./dist/variables.js", "types": "./dist/variables.d.ts"}
+			}
+		},
+		"src_json": {
+			"name": "@fuz.dev/fuz",
+			"version": "0.81.0",
+			"modules": {
+				"./Color_Scheme_Input.svelte": {"path": "Color_Scheme_Input.svelte", "declarations": []},
+				"./deployments.json": {"path": "deployments.json", "declarations": []},
+				"./deployments.task.js": {"path": "deployments.task.ts", "declarations": []},
+				"./orc.task.js": {"path": "orc.task.ts", "declarations": []},
+				"./style.css": {"path": "style.css", "declarations": []},
+				"./swallow.js": {
+					"path": "swallow.ts",
+					"declarations": [{"name": "swallow", "kind": "function"}]
+				},
+				"./Theme_Input.svelte": {"path": "Theme_Input.svelte", "declarations": []},
+				"./theme.css": {"path": "theme.css", "declarations": []},
+				"./theme.gen.css.js": {
+					"path": "theme.gen.css.ts",
+					"declarations": [{"name": "gen", "kind": "variable"}]
+				},
+				"./theme.js": {
+					"path": "theme.ts",
+					"declarations": [
+						{"name": "Color_Scheme", "kind": "type"},
+						{"name": "color_schemes", "kind": "variable"},
+						{"name": "THEME_COLOR", "kind": "variable"},
+						{"name": "sync_color_scheme", "kind": "function"},
+						{"name": "COLOR_SCHEME_STORAGE_KEY", "kind": "variable"},
+						{"name": "save_color_scheme", "kind": "function"},
+						{"name": "load_color_scheme", "kind": "function"},
+						{"name": "THEME_STORAGE_KEY", "kind": "variable"},
+						{"name": "save_theme", "kind": "function"},
+						{"name": "load_theme", "kind": "function"},
+						{"name": "create_theme_setup_script", "kind": "function"},
+						{"name": "create_theme_style_html", "kind": "function"},
+						{"name": "Theme", "kind": "type"},
+						{"name": "Theme_Variable", "kind": "type"},
+						{"name": "Render_Theme_Style_Options", "kind": "type"},
+						{"name": "render_theme_style", "kind": "function"},
+						{"name": "render_theme_variable", "kind": "function"},
+						{"name": "get_theme", "kind": "function"},
+						{"name": "set_theme", "kind": "function"},
+						{"name": "get_color_scheme", "kind": "function"},
+						{"name": "set_color_scheme", "kind": "function"}
+					]
+				},
+				"./Themed_Scope.svelte": {"path": "Themed_Scope.svelte", "declarations": []},
+				"./Themed.svelte": {"path": "Themed.svelte", "declarations": []},
+				"./themes.js": {
+					"path": "themes.ts",
+					"declarations": [
+						{"name": "DEFAULT_THEME", "kind": "variable"},
+						{"name": "default_themes", "kind": "variable"}
+					]
+				},
+				"./variables.js": {
+					"path": "variables.ts",
+					"declarations": [{"name": "default_variables", "kind": "variable"}]
+				}
+			}
+		},
+		"name": "@fuz.dev/fuz",
+		"repo_name": "fuz",
+		"repo_url": "https://github.com/fuz-dev/fuz",
+		"owner_name": "fuz-dev",
+		"homepage_url": "https://www.fuz.dev/",
+		"npm_url": "https://www.npmjs.com/package/@fuz.dev/fuz",
+		"changelog_url": "https://github.com/fuz-dev/fuz/blob/main/CHANGELOG.md",
+		"published": true,
+		"check_runs": {"status": "queued", "conclusion": null},
+		"pull_requests": [
+			{"number": 358, "title": "add .unprose", "user": {"login": "ryanatkn"}, "draft": true}
+		]
+	},
+	{
+		"url": "https://template.fuz.dev/",
+		"package_json": {
+			"name": "@fuz.dev/fuz_template",
+			"version": "0.0.1",
+			"description": "a static web app and Node library template with TypeScript, Svelte, SvelteKit, Vite, esbuild, Fuz, and Gro",
+			"icon": "❄",
+			"public": true,
+			"homepage": "https://template.fuz.dev/",
+			"repository": "https://github.com/fuz-dev/fuz_template",
+			"type": "module",
+			"engines": {"node": ">=20.10"},
+			"scripts": {
+				"start": "gro dev",
+				"dev": "gro dev",
+				"build": "gro build",
+				"test": "gro test",
+				"deploy": "gro deploy"
+			},
+			"files": ["dist"],
+			"devDependencies": {
+				"@feltjs/eslint-config": "^0.4.1",
+				"@fuz.dev/fuz": "^0.81.0",
+				"@fuz.dev/fuz_contextmenu": "^0.7.0",
+				"@fuz.dev/fuz_dialog": "^0.6.0",
+				"@fuz.dev/fuz_library": "^0.23.0",
+				"@grogarden/gro": "^0.107.0",
+				"@grogarden/util": "^0.18.1",
+				"@sveltejs/adapter-static": "^3.0.1",
+				"@sveltejs/kit": "^2.0.4",
+				"@sveltejs/vite-plugin-svelte": "^3.0.1",
+				"@typescript-eslint/eslint-plugin": "^6.15.0",
+				"@typescript-eslint/parser": "^6.15.0",
+				"eslint": "^8.56.0",
+				"eslint-plugin-svelte": "^2.35.1",
+				"prettier": "^3.1.1",
+				"prettier-plugin-svelte": "^3.1.2",
+				"svelte": "^4.2.8",
+				"svelte-check": "^3.6.2",
+				"tslib": "^2.6.2",
+				"typescript": "^5.3.3",
+				"uvu": "^0.5.6"
+			},
+			"eslintConfig": {"root": true, "extends": "@feltjs"},
+			"prettier": {
+				"plugins": ["prettier-plugin-svelte"],
+				"useTabs": true,
+				"printWidth": 100,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"overrides": [{"files": "package.json", "options": {"useTabs": false}}]
+			}
+		},
+		"src_json": {"name": "@fuz.dev/fuz_template", "version": "0.0.1"},
+		"name": "@fuz.dev/fuz_template",
+		"repo_name": "fuz_template",
+		"repo_url": "https://github.com/fuz-dev/fuz_template",
+		"owner_name": "fuz-dev",
+		"homepage_url": "https://template.fuz.dev/",
+		"npm_url": null,
+		"changelog_url": null,
+		"published": false,
+		"check_runs": {"status": "completed", "conclusion": "success"},
+		"pull_requests": []
+	},
+	{
+		"url": "https://library.fuz.dev/",
+		"package_json": {
+			"name": "@fuz.dev/fuz_library",
+			"version": "0.23.0",
+			"description": "components and helpers for Svelte, SvelteKit, and Fuz",
+			"icon": "🧶",
+			"public": true,
+			"license": "MIT",
+			"homepage": "https://library.fuz.dev/",
+			"repository": "https://github.com/fuz-dev/fuz_library",
+			"author": {
+				"name": "Ryan Atkinson",
+				"email": "mail@ryanatkn.com",
+				"url": "https://www.ryanatkn.com/"
+			},
+			"type": "module",
+			"engines": {"node": ">=20.10"},
+			"scripts": {
+				"start": "gro dev",
+				"dev": "gro dev",
+				"build": "gro build",
+				"test": "gro test",
+				"deploy": "gro deploy"
+			},
+			"files": ["dist"],
+			"peerDependencies": {"@grogarden/util": "*", "@sveltejs/kit": "*", "svelte": "*"},
+			"devDependencies": {
+				"@changesets/changelog-git": "^0.2.0",
+				"@feltjs/eslint-config": "^0.4.1",
+				"@fuz.dev/fuz": "^0.81.0",
+				"@fuz.dev/fuz_code": "^0.5.0",
+				"@grogarden/gro": "^0.107.0",
+				"@grogarden/util": "^0.18.1",
+				"@sveltejs/adapter-static": "^3.0.1",
+				"@sveltejs/kit": "^2.0.4",
+				"@sveltejs/package": "^2.2.4",
+				"@sveltejs/vite-plugin-svelte": "^3.0.1",
+				"@types/node": "^20.10.5",
+				"@typescript-eslint/eslint-plugin": "^6.15.0",
+				"@typescript-eslint/parser": "^6.15.0",
+				"eslint": "^8.56.0",
+				"eslint-plugin-svelte": "^2.35.1",
+				"prettier": "^3.1.1",
+				"prettier-plugin-svelte": "^3.1.2",
+				"prism-svelte": "^0.5.0",
+				"prismjs": "^1.29.0",
+				"svelte": "^4.2.8",
+				"svelte-check": "^3.6.2",
+				"tslib": "^2.6.2",
+				"typescript": "^5.3.3",
+				"uvu": "^0.5.6",
+				"zod": "^3.22.4"
+			},
+			"eslintConfig": {"root": true, "extends": "@feltjs", "rules": {"no-console": 1}},
+			"prettier": {
+				"plugins": ["prettier-plugin-svelte"],
+				"useTabs": true,
+				"printWidth": 100,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"overrides": [{"files": "package.json", "options": {"useTabs": false}}]
+			},
+			"exports": {
+				"./Alert.svelte": {
+					"svelte": "./dist/Alert.svelte",
+					"default": "./dist/Alert.svelte",
+					"types": "./dist/Alert.svelte.d.ts"
+				},
+				"./alert.js": {"default": "./dist/alert.js", "types": "./dist/alert.d.ts"},
+				"./Breadcrumb.svelte": {
+					"svelte": "./dist/Breadcrumb.svelte",
+					"default": "./dist/Breadcrumb.svelte",
+					"types": "./dist/Breadcrumb.svelte.d.ts"
+				},
+				"./Card.svelte": {
+					"svelte": "./dist/Card.svelte",
+					"default": "./dist/Card.svelte",
+					"types": "./dist/Card.svelte.d.ts"
+				},
+				"./Copy_To_Clipboard.svelte": {
+					"svelte": "./dist/Copy_To_Clipboard.svelte",
+					"default": "./dist/Copy_To_Clipboard.svelte",
+					"types": "./dist/Copy_To_Clipboard.svelte.d.ts"
+				},
+				"./Devmode_Controls.svelte": {
+					"svelte": "./dist/Devmode_Controls.svelte",
+					"default": "./dist/Devmode_Controls.svelte",
+					"types": "./dist/Devmode_Controls.svelte.d.ts"
+				},
+				"./devmode.js": {"default": "./dist/devmode.js", "types": "./dist/devmode.d.ts"},
+				"./Github_Logo.svelte": {
+					"svelte": "./dist/Github_Logo.svelte",
+					"default": "./dist/Github_Logo.svelte",
+					"types": "./dist/Github_Logo.svelte.d.ts"
+				},
+				"./helpers.js": {"default": "./dist/helpers.js", "types": "./dist/helpers.d.ts"},
+				"./Hue_Input.svelte": {
+					"svelte": "./dist/Hue_Input.svelte",
+					"default": "./dist/Hue_Input.svelte",
+					"types": "./dist/Hue_Input.svelte.d.ts"
+				},
+				"./Library_Footer.svelte": {
+					"svelte": "./dist/Library_Footer.svelte",
+					"default": "./dist/Library_Footer.svelte",
+					"types": "./dist/Library_Footer.svelte.d.ts"
+				},
+				"./Library_Header.svelte": {
+					"svelte": "./dist/Library_Header.svelte",
+					"default": "./dist/Library_Header.svelte",
+					"types": "./dist/Library_Header.svelte.d.ts"
+				},
+				"./Library_Menu.svelte": {
+					"svelte": "./dist/Library_Menu.svelte",
+					"default": "./dist/Library_Menu.svelte",
+					"types": "./dist/Library_Menu.svelte.d.ts"
+				},
+				"./Library_Nav.svelte": {
+					"svelte": "./dist/Library_Nav.svelte",
+					"default": "./dist/Library_Nav.svelte",
+					"types": "./dist/Library_Nav.svelte.d.ts"
+				},
+				"./Library_Panel.svelte": {
+					"svelte": "./dist/Library_Panel.svelte",
+					"default": "./dist/Library_Panel.svelte",
+					"types": "./dist/Library_Panel.svelte.d.ts"
+				},
+				"./Library_Vocab.svelte": {
+					"svelte": "./dist/Library_Vocab.svelte",
+					"default": "./dist/Library_Vocab.svelte",
+					"types": "./dist/Library_Vocab.svelte.d.ts"
+				},
+				"./Library.svelte": {
+					"svelte": "./dist/Library.svelte",
+					"default": "./dist/Library.svelte",
+					"types": "./dist/Library.svelte.d.ts"
+				},
+				"./Package_Detail.svelte": {
+					"svelte": "./dist/Package_Detail.svelte",
+					"default": "./dist/Package_Detail.svelte",
+					"types": "./dist/Package_Detail.svelte.d.ts"
+				},
+				"./package_meta.js": {
+					"default": "./dist/package_meta.js",
+					"types": "./dist/package_meta.d.ts"
+				},
+				"./Package_Summary.svelte": {
+					"svelte": "./dist/Package_Summary.svelte",
+					"default": "./dist/Package_Summary.svelte",
+					"types": "./dist/Package_Summary.svelte.d.ts"
+				},
+				"./Pending_Animation.svelte": {
+					"svelte": "./dist/Pending_Animation.svelte",
+					"default": "./dist/Pending_Animation.svelte",
+					"types": "./dist/Pending_Animation.svelte.d.ts"
+				},
+				"./Pending_Button.svelte": {
+					"svelte": "./dist/Pending_Button.svelte",
+					"default": "./dist/Pending_Button.svelte",
+					"types": "./dist/Pending_Button.svelte.d.ts"
+				},
+				"./Redirect.svelte": {
+					"svelte": "./dist/Redirect.svelte",
+					"default": "./dist/Redirect.svelte",
+					"types": "./dist/Redirect.svelte.d.ts"
+				},
+				"./Teleport.svelte": {
+					"svelte": "./dist/Teleport.svelte",
+					"default": "./dist/Teleport.svelte",
+					"types": "./dist/Teleport.svelte.d.ts"
+				},
+				"./Tome_Detail.svelte": {
+					"svelte": "./dist/Tome_Detail.svelte",
+					"default": "./dist/Tome_Detail.svelte",
+					"types": "./dist/Tome_Detail.svelte.d.ts"
+				},
+				"./Tome_Title.svelte": {
+					"svelte": "./dist/Tome_Title.svelte",
+					"default": "./dist/Tome_Title.svelte",
+					"types": "./dist/Tome_Title.svelte.d.ts"
+				},
+				"./tome.js": {"default": "./dist/tome.js", "types": "./dist/tome.d.ts"}
+			}
+		},
+		"src_json": {
+			"name": "@fuz.dev/fuz_library",
+			"version": "0.23.0",
+			"modules": {
+				"./Alert.svelte": {"path": "Alert.svelte", "declarations": []},
+				"./alert.js": {
+					"path": "alert.ts",
+					"declarations": [
+						{"name": "Alert_Status", "kind": "type"},
+						{"name": "Alert_Status_Options", "kind": "type"},
+						{"name": "alert_status_options", "kind": "variable"}
+					]
+				},
+				"./Breadcrumb.svelte": {"path": "Breadcrumb.svelte", "declarations": []},
+				"./Card.svelte": {"path": "Card.svelte", "declarations": []},
+				"./Copy_To_Clipboard.svelte": {"path": "Copy_To_Clipboard.svelte", "declarations": []},
+				"./Devmode_Controls.svelte": {"path": "Devmode_Controls.svelte", "declarations": []},
+				"./devmode.js": {
+					"path": "devmode.ts",
+					"declarations": [
+						{"name": "get_devmode", "kind": "function"},
+						{"name": "set_devmode", "kind": "function"}
+					]
+				},
+				"./Github_Logo.svelte": {"path": "Github_Logo.svelte", "declarations": []},
+				"./helpers.js": {
+					"path": "helpers.ts",
+					"declarations": [
+						{"name": "LIBRARY_PATH", "kind": "variable"},
+						{"name": "to_library_path_info", "kind": "function"}
+					]
+				},
+				"./Hue_Input.svelte": {"path": "Hue_Input.svelte", "declarations": []},
+				"./Library_Footer.svelte": {"path": "Library_Footer.svelte", "declarations": []},
+				"./Library_Header.svelte": {"path": "Library_Header.svelte", "declarations": []},
+				"./Library_Menu.svelte": {"path": "Library_Menu.svelte", "declarations": []},
+				"./Library_Nav.svelte": {"path": "Library_Nav.svelte", "declarations": []},
+				"./Library_Panel.svelte": {"path": "Library_Panel.svelte", "declarations": []},
+				"./Library_Vocab.svelte": {"path": "Library_Vocab.svelte", "declarations": []},
+				"./Library.svelte": {"path": "Library.svelte", "declarations": []},
+				"./Package_Detail.svelte": {"path": "Package_Detail.svelte", "declarations": []},
+				"./package_meta.js": {
+					"path": "package_meta.ts",
+					"declarations": [
+						{"name": "Package", "kind": "type"},
+						{"name": "Package_Meta", "kind": "type"},
+						{"name": "parse_package_meta", "kind": "function"},
+						{"name": "parse_repo_name", "kind": "function"},
+						{"name": "format_host", "kind": "function"},
+						{"name": "parse_org_url", "kind": "function"}
+					]
+				},
+				"./Package_Summary.svelte": {"path": "Package_Summary.svelte", "declarations": []},
+				"./Pending_Animation.svelte": {"path": "Pending_Animation.svelte", "declarations": []},
+				"./Pending_Button.svelte": {"path": "Pending_Button.svelte", "declarations": []},
+				"./Redirect.svelte": {"path": "Redirect.svelte", "declarations": []},
+				"./Teleport.svelte": {"path": "Teleport.svelte", "declarations": []},
+				"./Tome_Detail.svelte": {"path": "Tome_Detail.svelte", "declarations": []},
+				"./Tome_Title.svelte": {"path": "Tome_Title.svelte", "declarations": []},
+				"./tome.js": {
+					"path": "tome.ts",
+					"declarations": [
+						{"name": "Tome", "kind": "variable"},
+						{"name": "init_tome", "kind": "function"},
+						{"name": "get_tomes", "kind": "function"},
+						{"name": "set_tomes", "kind": "function"},
+						{"name": "get_tome", "kind": "function"}
+					]
+				}
+			}
+		},
+		"name": "@fuz.dev/fuz_library",
+		"repo_name": "fuz_library",
+		"repo_url": "https://github.com/fuz-dev/fuz_library",
+		"owner_name": "fuz-dev",
+		"homepage_url": "https://library.fuz.dev/",
+		"npm_url": "https://www.npmjs.com/package/@fuz.dev/fuz_library",
+		"changelog_url": "https://github.com/fuz-dev/fuz_library/blob/main/CHANGELOG.md",
+		"published": true,
+		"check_runs": {"status": "completed", "conclusion": "success"},
+		"pull_requests": [
+			{
+				"number": 10,
+				"title": "show deps on `Package_Detail`",
+				"user": {"login": "ryanatkn"},
+				"draft": true
+			}
+		]
+	},
+	{
+		"url": "https://contextmenu.fuz.dev/",
+		"package_json": {
+			"name": "@fuz.dev/fuz_contextmenu",
+			"description": "contextmenu for Svelte and Fuz",
+			"version": "0.7.0",
+			"public": true,
+			"type": "module",
+			"license": "MIT",
+			"homepage": "https://contextmenu.fuz.dev/",
+			"repository": "https://github.com/fuz-dev/fuz_contextmenu",
+			"author": {
+				"name": "Ryan Atkinson",
+				"email": "mail@ryanatkn.com",
+				"url": "https://www.ryanatkn.com/"
+			},
+			"engines": {"node": ">=20.7"},
+			"scripts": {
+				"start": "gro dev",
+				"dev": "gro dev",
+				"build": "gro build",
+				"test": "gro test",
+				"deploy": "gro deploy"
+			},
+			"files": ["dist"],
+			"peerDependencies": {"@fuz.dev/fuz_library": "*", "@grogarden/util": "*", "svelte": "*"},
+			"devDependencies": {
+				"@changesets/changelog-git": "^0.2.0",
+				"@feltjs/eslint-config": "^0.4.1",
+				"@fuz.dev/fuz": "^0.81.0",
+				"@fuz.dev/fuz_code": "^0.5.0",
+				"@fuz.dev/fuz_dialog": "^0.6.0",
+				"@fuz.dev/fuz_library": "^0.23.0",
+				"@grogarden/gro": "^0.107.0",
+				"@grogarden/util": "^0.18.1",
+				"@sveltejs/adapter-static": "^3.0.1",
+				"@sveltejs/kit": "^2.0.4",
+				"@sveltejs/package": "^2.2.4",
+				"@sveltejs/vite-plugin-svelte": "^3.0.1",
+				"@types/prismjs": "^1.26.3",
+				"@typescript-eslint/eslint-plugin": "^6.15.0",
+				"@typescript-eslint/parser": "^6.15.0",
+				"eslint": "^8.56.0",
+				"eslint-plugin-svelte": "^2.35.1",
+				"prettier": "^3.1.1",
+				"prettier-plugin-svelte": "^3.1.2",
+				"prism-svelte": "^0.5.0",
+				"prismjs": "^1.29.0",
+				"svelte": "^4.2.8",
+				"svelte-check": "^3.6.2",
+				"tslib": "^2.6.2",
+				"typescript": "^5.3.3",
+				"uvu": "^0.5.6"
+			},
+			"eslintConfig": {"root": true, "extends": "@feltjs"},
+			"prettier": {
+				"plugins": ["prettier-plugin-svelte"],
+				"useTabs": true,
+				"printWidth": 100,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"overrides": [{"files": "package.json", "options": {"useTabs": false}}]
+			},
+			"exports": {
+				"./Contextmenu_Entry.svelte": {
+					"svelte": "./dist/Contextmenu_Entry.svelte",
+					"default": "./dist/Contextmenu_Entry.svelte",
+					"types": "./dist/Contextmenu_Entry.svelte.d.ts"
+				},
+				"./Contextmenu_Link_Entry.svelte": {
+					"svelte": "./dist/Contextmenu_Link_Entry.svelte",
+					"default": "./dist/Contextmenu_Link_Entry.svelte",
+					"types": "./dist/Contextmenu_Link_Entry.svelte.d.ts"
+				},
+				"./Contextmenu_Submenu.svelte": {
+					"svelte": "./dist/Contextmenu_Submenu.svelte",
+					"default": "./dist/Contextmenu_Submenu.svelte",
+					"types": "./dist/Contextmenu_Submenu.svelte.d.ts"
+				},
+				"./Contextmenu_Text_Entry.svelte": {
+					"svelte": "./dist/Contextmenu_Text_Entry.svelte",
+					"default": "./dist/Contextmenu_Text_Entry.svelte",
+					"types": "./dist/Contextmenu_Text_Entry.svelte.d.ts"
+				},
+				"./Contextmenu.svelte": {
+					"svelte": "./dist/Contextmenu.svelte",
+					"default": "./dist/Contextmenu.svelte",
+					"types": "./dist/Contextmenu.svelte.d.ts"
+				},
+				"./contextmenu.js": {"default": "./dist/contextmenu.js", "types": "./dist/contextmenu.d.ts"}
+			}
+		},
+		"src_json": {
+			"name": "@fuz.dev/fuz_contextmenu",
+			"version": "0.7.0",
+			"modules": {
+				"./Contextmenu_Entry.svelte": {"path": "Contextmenu_Entry.svelte", "declarations": []},
+				"./Contextmenu_Link_Entry.svelte": {
+					"path": "Contextmenu_Link_Entry.svelte",
+					"declarations": []
+				},
+				"./Contextmenu_Submenu.svelte": {"path": "Contextmenu_Submenu.svelte", "declarations": []},
+				"./Contextmenu_Text_Entry.svelte": {
+					"path": "Contextmenu_Text_Entry.svelte",
+					"declarations": []
+				},
+				"./Contextmenu.svelte": {"path": "Contextmenu.svelte", "declarations": []},
+				"./contextmenu.js": {
+					"path": "contextmenu.ts",
+					"declarations": [
+						{"name": "Contextmenu_Params", "kind": "type"},
+						{"name": "Contextmenu_Action_Params", "kind": "type"},
+						{"name": "to_contextmenu_params", "kind": "function"},
+						{"name": "Item_State", "kind": "type"},
+						{"name": "Entry_State", "kind": "type"},
+						{"name": "Submenu_State", "kind": "type"},
+						{"name": "Root_Menu_State", "kind": "type"},
+						{"name": "Contextmenu_Run", "kind": "type"},
+						{"name": "Contextmenu", "kind": "type"},
+						{"name": "Contextmenu_Store", "kind": "type"},
+						{"name": "Contextmenu_Store_Options", "kind": "type"},
+						{"name": "create_contextmenu", "kind": "function"},
+						{"name": "open_contextmenu", "kind": "function"},
+						{"name": "set_contextmenu", "kind": "function"},
+						{"name": "get_contextmenu", "kind": "function"},
+						{"name": "set_contextmenu_submenu", "kind": "function"},
+						{"name": "get_contextmenu_submenu", "kind": "function"},
+						{"name": "set_contextmenu_dimensions", "kind": "function"},
+						{"name": "get_contextmenu_dimensions", "kind": "function"}
+					]
+				}
+			}
+		},
+		"name": "@fuz.dev/fuz_contextmenu",
+		"repo_name": "fuz_contextmenu",
+		"repo_url": "https://github.com/fuz-dev/fuz_contextmenu",
+		"owner_name": "fuz-dev",
+		"homepage_url": "https://contextmenu.fuz.dev/",
+		"npm_url": "https://www.npmjs.com/package/@fuz.dev/fuz_contextmenu",
+		"changelog_url": "https://github.com/fuz-dev/fuz_contextmenu/blob/main/CHANGELOG.md",
+		"published": true,
+		"check_runs": {"status": "completed", "conclusion": "failure"},
+		"pull_requests": []
+	},
+	{
+		"url": "https://dialog.fuz.dev/",
+		"package_json": {
+			"name": "@fuz.dev/fuz_dialog",
+			"description": "dialog component for Svelte with Fuz",
+			"version": "0.6.0",
+			"public": true,
+			"license": "MIT",
+			"homepage": "https://dialog.fuz.dev/",
+			"repository": "https://github.com/fuz-dev/fuz_dialog",
+			"author": {
+				"name": "Ryan Atkinson",
+				"email": "mail@ryanatkn.com",
+				"url": "https://www.ryanatkn.com/"
+			},
+			"type": "module",
+			"engines": {"node": ">=20.10"},
+			"scripts": {
+				"start": "gro dev",
+				"dev": "gro dev",
+				"build": "gro build",
+				"test": "gro test",
+				"deploy": "gro deploy"
+			},
+			"files": ["dist"],
+			"peerDependencies": {"@fuz.dev/fuz_library": "*", "@grogarden/util": "*", "svelte": "*"},
+			"devDependencies": {
+				"@changesets/changelog-git": "^0.2.0",
+				"@feltjs/eslint-config": "^0.4.1",
+				"@fuz.dev/fuz": "^0.81.0",
+				"@fuz.dev/fuz_code": "^0.5.0",
+				"@fuz.dev/fuz_library": "^0.23.0",
+				"@grogarden/gro": "^0.107.0",
+				"@grogarden/util": "^0.18.1",
+				"@sveltejs/adapter-static": "^3.0.1",
+				"@sveltejs/kit": "^2.0.4",
+				"@sveltejs/package": "^2.2.4",
+				"@sveltejs/vite-plugin-svelte": "^3.0.1",
+				"@typescript-eslint/eslint-plugin": "^6.15.0",
+				"@typescript-eslint/parser": "^6.15.0",
+				"eslint": "^8.56.0",
+				"eslint-plugin-svelte": "^2.35.1",
+				"prettier": "^3.1.1",
+				"prettier-plugin-svelte": "^3.1.2",
+				"prism-svelte": "^0.5.0",
+				"prismjs": "^1.29.0",
+				"svelte": "^4.2.8",
+				"svelte-check": "^3.6.2",
+				"tslib": "^2.6.2",
+				"typescript": "^5.3.3",
+				"uvu": "^0.5.6"
+			},
+			"eslintConfig": {"root": true, "extends": "@feltjs"},
+			"prettier": {
+				"plugins": ["prettier-plugin-svelte"],
+				"useTabs": true,
+				"printWidth": 100,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"overrides": [{"files": "package.json", "options": {"useTabs": false}}]
+			},
+			"exports": {
+				"./Dialog.svelte": {
+					"svelte": "./dist/Dialog.svelte",
+					"default": "./dist/Dialog.svelte",
+					"types": "./dist/Dialog.svelte.d.ts"
+				},
+				"./dialog.js": {"default": "./dist/dialog.js", "types": "./dist/dialog.d.ts"},
+				"./Dialogs.svelte": {
+					"svelte": "./dist/Dialogs.svelte",
+					"default": "./dist/Dialogs.svelte",
+					"types": "./dist/Dialogs.svelte.d.ts"
+				}
+			}
+		},
+		"src_json": {
+			"name": "@fuz.dev/fuz_dialog",
+			"version": "0.6.0",
+			"modules": {
+				"./Dialog.svelte": {"path": "Dialog.svelte", "declarations": []},
+				"./dialog.js": {
+					"path": "dialog.ts",
+					"declarations": [
+						{"name": "to_dialog_params", "kind": "function"},
+						{"name": "Dialog_Params", "kind": "type"},
+						{"name": "Dialog_Layout", "kind": "type"},
+						{"name": "dialog_layouts", "kind": "variable"}
+					]
+				},
+				"./Dialogs.svelte": {"path": "Dialogs.svelte", "declarations": []}
+			}
+		},
+		"name": "@fuz.dev/fuz_dialog",
+		"repo_name": "fuz_dialog",
+		"repo_url": "https://github.com/fuz-dev/fuz_dialog",
+		"owner_name": "fuz-dev",
+		"homepage_url": "https://dialog.fuz.dev/",
+		"npm_url": "https://www.npmjs.com/package/@fuz.dev/fuz_dialog",
+		"changelog_url": "https://github.com/fuz-dev/fuz_dialog/blob/main/CHANGELOG.md",
+		"published": true,
+		"check_runs": {"status": "completed", "conclusion": "success"},
+		"pull_requests": []
+	},
+	{
+		"url": "https://code.fuz.dev/",
+		"package_json": {
+			"name": "@fuz.dev/fuz_code",
+			"description": "syntax highlighting using prismjs for Svelte, SvelteKit, TypeScript, and Fuz",
+			"version": "0.5.0",
+			"public": true,
+			"license": "MIT",
+			"type": "module",
+			"homepage": "https://code.fuz.dev/",
+			"repository": "https://github.com/fuz-dev/fuz_code",
+			"author": {
+				"name": "Ryan Atkinson",
+				"email": "mail@ryanatkn.com",
+				"url": "https://www.ryanatkn.com/"
+			},
+			"engines": {"node": ">=20.10"},
+			"scripts": {
+				"start": "gro dev",
+				"dev": "gro dev",
+				"build": "gro build",
+				"test": "gro test",
+				"deploy": "gro deploy"
+			},
+			"files": ["dist"],
+			"peerDependencies": {"svelte": "*"},
+			"devDependencies": {
+				"@changesets/changelog-git": "^0.2.0",
+				"@feltjs/eslint-config": "^0.4.1",
+				"@fuz.dev/fuz": "^0.81.0",
+				"@fuz.dev/fuz_library": "^0.23.0",
+				"@grogarden/gro": "^0.107.0",
+				"@grogarden/util": "^0.18.1",
+				"@sveltejs/adapter-static": "^3.0.1",
+				"@sveltejs/kit": "^2.0.4",
+				"@sveltejs/package": "^2.2.4",
+				"@sveltejs/vite-plugin-svelte": "^3.0.1",
+				"@types/prismjs": "^1.26.3",
+				"@typescript-eslint/eslint-plugin": "^6.15.0",
+				"@typescript-eslint/parser": "^6.15.0",
+				"eslint": "^8.56.0",
+				"eslint-plugin-svelte": "^2.35.1",
+				"prettier": "^3.1.1",
+				"prettier-plugin-svelte": "^3.1.2",
+				"prism-svelte": "^0.5.0",
+				"prismjs": "^1.29.0",
+				"svelte": "^4.2.8",
+				"svelte-check": "^3.6.2",
+				"tslib": "^2.6.2",
+				"typescript": "^5.3.3",
+				"uvu": "^0.5.6"
+			},
+			"eslintConfig": {"root": true, "extends": "@feltjs"},
+			"prettier": {
+				"plugins": ["prettier-plugin-svelte"],
+				"useTabs": true,
+				"printWidth": 100,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"overrides": [{"files": "package.json", "options": {"useTabs": false}}]
+			},
+			"exports": {
+				"./Code.svelte": {
+					"svelte": "./dist/Code.svelte",
+					"default": "./dist/Code.svelte",
+					"types": "./dist/Code.svelte.d.ts"
+				},
+				"./prism.css": {"default": "./dist/prism.css"},
+				"./remove_prism_css_vite_plugin.js": {
+					"default": "./dist/remove_prism_css_vite_plugin.js",
+					"types": "./dist/remove_prism_css_vite_plugin.d.ts"
+				}
+			}
+		},
+		"src_json": {
+			"name": "@fuz.dev/fuz_code",
+			"version": "0.5.0",
+			"modules": {
+				"./Code.svelte": {"path": "Code.svelte", "declarations": []},
+				"./prism.css": {"path": "prism.css", "declarations": []},
+				"./remove_prism_css_vite_plugin.js": {
+					"path": "remove_prism_css_vite_plugin.ts",
+					"declarations": [{"name": "remove_prism_css", "kind": "function"}]
+				}
+			}
+		},
+		"name": "@fuz.dev/fuz_code",
+		"repo_name": "fuz_code",
+		"repo_url": "https://github.com/fuz-dev/fuz_code",
+		"owner_name": "fuz-dev",
+		"homepage_url": "https://code.fuz.dev/",
+		"npm_url": "https://www.npmjs.com/package/@fuz.dev/fuz_code",
+		"changelog_url": "https://github.com/fuz-dev/fuz_code/blob/main/CHANGELOG.md",
+		"published": true,
+		"check_runs": {"status": "completed", "conclusion": "success"},
+		"pull_requests": []
+	},
+	{
+		"url": "https://intersect.fuz.dev/",
+		"package_json": {
+			"name": "@fuz.dev/svelte_intersect",
+			"description": "a Svelte action for IntersectionObserver",
+			"version": "0.8.0",
+			"public": true,
+			"license": "MIT",
+			"type": "module",
+			"homepage": "https://intersect.fuz.dev/",
+			"repository": "https://github.com/fuz-dev/svelte_intersect",
+			"engines": {"node": ">=20.10"},
+			"scripts": {
+				"start": "gro dev",
+				"dev": "gro dev",
+				"build": "gro build",
+				"test": "gro test",
+				"deploy": "gro deploy"
+			},
+			"files": ["dist"],
+			"peerDependencies": {"svelte": "*"},
+			"devDependencies": {
+				"@changesets/changelog-git": "^0.2.0",
+				"@feltjs/eslint-config": "^0.4.1",
+				"@fuz.dev/fuz": "^0.81.0",
+				"@fuz.dev/fuz_code": "^0.5.0",
+				"@fuz.dev/fuz_library": "^0.23.0",
+				"@grogarden/gro": "^0.107.0",
+				"@grogarden/util": "^0.18.1",
+				"@sveltejs/adapter-static": "^3.0.1",
+				"@sveltejs/kit": "^2.0.4",
+				"@sveltejs/package": "^2.2.4",
+				"@sveltejs/vite-plugin-svelte": "^3.0.1",
+				"@typescript-eslint/eslint-plugin": "^6.15.0",
+				"@typescript-eslint/parser": "^6.15.0",
+				"eslint": "^8.56.0",
+				"eslint-plugin-svelte": "^2.35.1",
+				"prettier": "^3.1.1",
+				"prettier-plugin-svelte": "^3.1.2",
+				"prism-svelte": "^0.5.0",
+				"prismjs": "^1.29.0",
+				"svelte": "^4.2.8",
+				"svelte-check": "^3.6.2",
+				"tslib": "^2.6.2",
+				"typescript": "^5.3.3",
+				"uvu": "^0.5.6"
+			},
+			"eslintConfig": {"root": true, "extends": "@feltjs"},
+			"prettier": {
+				"plugins": ["prettier-plugin-svelte"],
+				"useTabs": true,
+				"printWidth": 100,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"overrides": [{"files": "package.json", "options": {"useTabs": false}}]
+			},
+			"exports": {
+				".": {"default": "./dist/index.js", "types": "./dist/index.d.ts"},
+				"./intersect.js": {"default": "./dist/intersect.js", "types": "./dist/intersect.d.ts"}
+			}
+		},
+		"src_json": {
+			"name": "@fuz.dev/svelte_intersect",
+			"version": "0.8.0",
+			"modules": {
+				".": {"path": "index.ts", "declarations": []},
+				"./intersect.js": {
+					"path": "intersect.ts",
+					"declarations": [
+						{"name": "Intersect_Callback", "kind": "type"},
+						{"name": "Intersect_Params", "kind": "type"},
+						{"name": "Intersect_Params_Or_Callback", "kind": "type"},
+						{"name": "intersect", "kind": "function"}
+					]
+				}
+			}
+		},
+		"name": "@fuz.dev/svelte_intersect",
+		"repo_name": "svelte_intersect",
+		"repo_url": "https://github.com/fuz-dev/svelte_intersect",
+		"owner_name": "fuz-dev",
+		"homepage_url": "https://intersect.fuz.dev/",
+		"npm_url": "https://www.npmjs.com/package/@fuz.dev/svelte_intersect",
+		"changelog_url": "https://github.com/fuz-dev/svelte_intersect/blob/main/CHANGELOG.md",
+		"published": true,
+		"check_runs": {"status": "completed", "conclusion": "success"},
+		"pull_requests": []
+	},
+	{
+		"url": "https://mastodon.fuz.dev/",
+		"package_json": {
+			"name": "@fuz.dev/fuz_mastodon",
+			"description": "Mastodon components and helpers for Svelte, SvelteKit, and Fuz",
+			"version": "0.5.0",
+			"public": true,
+			"icon": "🦣",
+			"license": "MIT",
+			"homepage": "https://mastodon.fuz.dev/",
+			"repository": "https://github.com/fuz-dev/fuz_mastodon",
+			"author": {
+				"name": "Ryan Atkinson",
+				"email": "mail@ryanatkn.com",
+				"url": "https://www.ryanatkn.com/"
+			},
+			"type": "module",
+			"engines": {"node": ">=20.10"},
+			"scripts": {
+				"start": "gro dev",
+				"dev": "gro dev",
+				"build": "gro build",
+				"test": "gro test",
+				"deploy": "gro deploy"
+			},
+			"files": ["dist"],
+			"peerDependencies": {
+				"@fuz.dev/fuz_library": "*",
+				"@fuz.dev/svelte_intersect": "*",
+				"@grogarden/util": "*",
+				"@sveltejs/kit": "*",
+				"svelte": "*"
+			},
+			"devDependencies": {
+				"@changesets/changelog-git": "^0.2.0",
+				"@feltjs/eslint-config": "^0.4.1",
+				"@fuz.dev/fuz": "^0.81.0",
+				"@fuz.dev/fuz_code": "^0.5.0",
+				"@fuz.dev/fuz_contextmenu": "^0.7.0",
+				"@fuz.dev/fuz_dialog": "^0.6.0",
+				"@fuz.dev/fuz_library": "^0.23.0",
+				"@fuz.dev/svelte_intersect": "^0.8.0",
+				"@grogarden/gro": "^0.107.0",
+				"@grogarden/util": "^0.18.1",
+				"@sveltejs/adapter-static": "^3.0.1",
+				"@sveltejs/kit": "^2.0.4",
+				"@sveltejs/package": "^2.2.4",
+				"@sveltejs/vite-plugin-svelte": "^3.0.1",
+				"@typescript-eslint/eslint-plugin": "^6.15.0",
+				"@typescript-eslint/parser": "^6.15.0",
+				"date-fns": "^3.0.1",
+				"eslint": "^8.56.0",
+				"eslint-plugin-svelte": "^2.35.1",
+				"prettier": "^3.1.1",
+				"prettier-plugin-svelte": "^3.1.2",
+				"prism-svelte": "^0.5.0",
+				"prismjs": "^1.29.0",
+				"svelte": "^4.2.8",
+				"svelte-check": "^3.6.2",
+				"tslib": "^2.6.2",
+				"typescript": "^5.3.3",
+				"uvu": "^0.5.6"
+			},
+			"eslintConfig": {"root": true, "extends": "@feltjs", "rules": {"no-console": 1}},
+			"prettier": {
+				"plugins": ["prettier-plugin-svelte"],
+				"useTabs": true,
+				"printWidth": 100,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"overrides": [{"files": "package.json", "options": {"useTabs": false}}]
+			},
+			"exports": {
+				"./Mastodon_Status_Item.svelte": {
+					"svelte": "./dist/Mastodon_Status_Item.svelte",
+					"default": "./dist/Mastodon_Status_Item.svelte",
+					"types": "./dist/Mastodon_Status_Item.svelte.d.ts"
+				},
+				"./Mastodon_Status_Tree.svelte": {
+					"svelte": "./dist/Mastodon_Status_Tree.svelte",
+					"default": "./dist/Mastodon_Status_Tree.svelte",
+					"types": "./dist/Mastodon_Status_Tree.svelte.d.ts"
+				},
+				"./mastodon.js": {"default": "./dist/mastodon.js", "types": "./dist/mastodon.d.ts"},
+				"./storage.js": {"default": "./dist/storage.js", "types": "./dist/storage.d.ts"},
+				"./Toot_Input.svelte": {
+					"svelte": "./dist/Toot_Input.svelte",
+					"default": "./dist/Toot_Input.svelte",
+					"types": "./dist/Toot_Input.svelte.d.ts"
+				},
+				"./Toot_Loader.svelte": {
+					"svelte": "./dist/Toot_Loader.svelte",
+					"default": "./dist/Toot_Loader.svelte",
+					"types": "./dist/Toot_Loader.svelte.d.ts"
+				},
+				"./Toot.svelte": {
+					"svelte": "./dist/Toot.svelte",
+					"default": "./dist/Toot.svelte",
+					"types": "./dist/Toot.svelte.d.ts"
+				}
+			}
+		},
+		"src_json": {
+			"name": "@fuz.dev/fuz_mastodon",
+			"version": "0.5.0",
+			"modules": {
+				"./Mastodon_Status_Item.svelte": {
+					"path": "Mastodon_Status_Item.svelte",
+					"declarations": []
+				},
+				"./Mastodon_Status_Tree.svelte": {
+					"path": "Mastodon_Status_Tree.svelte",
+					"declarations": []
+				},
+				"./mastodon.js": {
+					"path": "mastodon.ts",
+					"declarations": [
+						{"name": "to_mastodon_status_url", "kind": "function"},
+						{"name": "to_mastodon_status_url_with_author", "kind": "function"},
+						{"name": "to_mastodon_status_url_with_users_author", "kind": "function"},
+						{"name": "to_mastodon_api_status_url", "kind": "function"},
+						{"name": "to_mastodon_api_status_context_url", "kind": "function"},
+						{"name": "to_mastodon_api_favourites_url", "kind": "function"},
+						{"name": "Mastodon_Status_Url", "kind": "type"},
+						{"name": "parse_mastodon_status_url", "kind": "function"},
+						{"name": "fetch_mastodon_status_context", "kind": "function"},
+						{"name": "fetch_mastodon_status", "kind": "function"},
+						{"name": "fetch_mastodon_favourites", "kind": "function"},
+						{"name": "Mastodon_Status_Context", "kind": "type"},
+						{"name": "Mastodon_Status", "kind": "type"},
+						{"name": "Mastodon_Favourite", "kind": "type"}
+					]
+				},
+				"./storage.js": {
+					"path": "storage.ts",
+					"declarations": [
+						{"name": "load_from_storage", "kind": "function"},
+						{"name": "set_in_storage", "kind": "function"}
+					]
+				},
+				"./Toot_Input.svelte": {"path": "Toot_Input.svelte", "declarations": []},
+				"./Toot_Loader.svelte": {"path": "Toot_Loader.svelte", "declarations": []},
+				"./Toot.svelte": {"path": "Toot.svelte", "declarations": []}
+			}
+		},
+		"name": "@fuz.dev/fuz_mastodon",
+		"repo_name": "fuz_mastodon",
+		"repo_url": "https://github.com/fuz-dev/fuz_mastodon",
+		"owner_name": "fuz-dev",
+		"homepage_url": "https://mastodon.fuz.dev/",
+		"npm_url": "https://www.npmjs.com/package/@fuz.dev/fuz_mastodon",
+		"changelog_url": "https://github.com/fuz-dev/fuz_mastodon/blob/main/CHANGELOG.md",
+		"published": true,
+		"check_runs": {"status": "completed", "conclusion": "success"},
+		"pull_requests": []
+	}
+]

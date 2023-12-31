@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0._QbtFsjz.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/2.oP0Ls7DX.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Alert.v5dst0s0.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Tome_Detail.qR6PR4oa.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Library_Panel.TCWi3_uw.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Code._O60TntG.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Breadcrumb.0f2lhypA.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Library_Footer.fIGc2ZbQ.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Package_Summary.xG-fjy71.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/15.dJE3zqaN.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/14.HXr3cnAJ.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Theme_Variable_Detail.BtPaQGCO.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/16.kzUaEwe-.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/13.wGvZn7_4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/12.P2NSWjnH.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.LFqsxc9F.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.Tw02lqTe.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.t94Lhh_n.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.8YZw3EJz.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.A26FhUI8.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.MxabShxR.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.vF5o2Fqn.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/dom.lhjk7esS.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/theme.yyGqKyJv.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/variables.oXc_6KmD.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.in0sV2wI.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.qGSyOFK2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.4Anau-Rw.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/11.yf1rjmqf.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Alert.6n6Yw6tE.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Tome_Detail.Lk9roByq.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Library_Panel.pFvM22G1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/tome.KXa8VArh.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Code.07JsAUgq.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/spread.AQEXjpNi.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Breadcrumb.KJPThWpi.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Library_Footer.3TSMmj0m.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/package_meta.E2jhV1-o.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Package_Summary.KR6DO6c1.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/10.gWmkDIB4.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/15.00Q96J2H.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/14.kUDdCymY.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Theme_Variable_Detail.p7DC_5ej.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/globals.0cDDIVm6.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/16.CoMMH7BH.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/13.cSglEtn4.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/12.EtWqQbrC.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/package.tF5epZ96.js"><!-- HEAD_svelte-1qw2uo0_START --><meta name="color-scheme" content="light dark"> <meta name="theme-color" content="#257e25"> <script><!-- HTML_TAG_START -->
+	try {
+		let c = localStorage.getItem('color-scheme');
+		if (c === 'auto' || (c !== 'dark' && c !== 'light')) {
+			c = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		}
+		if (c === 'dark') document.documentElement.classList.add('dark');
+	} catch (_) {  }
+<!-- HTML_TAG_END --></script><!-- HEAD_svelte-1qw2uo0_END --><!-- HEAD_svelte-1vv27bk_START --><!-- HTML_TAG_START --><style nonce="%sveltekit.nonce%">
+	#themed_6#themed_6 {
+	--hue_1: 210; /* blue */
+	--color_1: hsl(var(--hue_1), 55%, 50%);
+	--hue_2: 120; /* green, triad with `--color_3` and `--color_4` */
+	--color_2: hsl(var(--hue_2), 55%, 32%); /* same as THEME_COLOR */
+	--hue_3: 251; /* purple, triad with `--color_2` and `--color_4` */
+	--color_3: hsl(var(--hue_3), 50%, 50%);
+	--hue_4: 26; /* orange, triad with `--color_2` and `--color_3` */
+	--color_4: hsl(var(--hue_4), 55%, 50%);
+	--hue_5: 0; /* red */
+	--color_5: hsl(var(--hue_5), 50%, 50%);
+	--hue_6: 32; /* brown */
+	--color_6: hsl(var(--hue_6), 97%, 22%);
+	--hue_7: 335; /* pink */
+	--color_7: hsl(var(--hue_7), 74%, 56%);
+	--darken_1: #0000000f; /* 6% */
+	--darken_2: #0000001f; /* 12% */
+	--darken_3: #00000036; /* 21% */
+	--darken_4: #00000052; /* 32% */
+	--darken_5: #00000073; /* 45% */
+	--darken_6: #000000a6; /* 65% */
+	--darken_7: #000000cc; /* 80% */
+	--darken_8: #000000e3; /* 89% */
+	--darken_9: #000000f5; /* 96% */
+	--lighten_1: #ffffff0f; /* 6% */
+	--lighten_2: #ffffff1f; /* 12% */
+	--lighten_3: #ffffff36; /* 21% */
+	--lighten_4: #ffffff52; /* 32% */
+	--lighten_5: #ffffff73; /* 45% */
+	--lighten_6: #ffffffa6; /* 65% */
+	--lighten_7: #ffffffcc; /* 80% */
+	--lighten_8: #ffffffe3; /* 89% */
+	--lighten_9: #fffffff5; /* 96% */
+	--tint_hue: var(--hue_4);
+	--tint_saturation: 11%;
+	--bg: hsl(var(--tint_hue), var(--tint_saturation), 96%);
+	--fg: hsl(var(--tint_hue), var(--tint_saturation), 7%);
+	--bg_1: var(--lighten_1);
+	--bg_2: var(--lighten_2);
+	--bg_3: var(--lighten_3);
+	--bg_4: var(--lighten_4);
+	--bg_5: var(--lighten_5);
+	--bg_6: var(--lighten_6);
+	--bg_7: var(--lighten_7);
+	--bg_8: var(--lighten_8);
+	--bg_9: var(--lighten_9);
+	--fg_1: var(--darken_1);
+	--fg_2: var(--darken_2);
+	--fg_3: var(--darken_3);
+	--fg_4: var(--darken_4);
+	--fg_5: var(--darken_5);
+	--fg_6: var(--darken_6);
+	--fg_7: var(--darken_7);
+	--fg_8: var(--darken_8);
+	--fg_9: var(--darken_9);
+	--text_color: var(--text_1);
+	--text_1: hsl(var(--tint_hue), var(--tint_saturation), 16%);
+	--text_2: hsl(var(--tint_hue), var(--tint_saturation), 32%);
+	--text_3: hsl(var(--tint_hue), var(--tint_saturation), 48%);
+	--text_disabled: var(--text_3);
+	--text_active: hsl(var(--hue_1), 55%, 40%);;
+	--line_height: var(--line_height_5);
+	--line_height_1: 1;
+	--line_height_2: 1.1;
+	--line_height_3: 1.2;
+	--line_height_4: 1.35;
+	--line_height_5: 1.5;
+	--line_height_6: 1.75;
+	--line_height_7: 2;
+	--font_family: system-ui, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* @source https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+	--font_family_mono: ui-monospace, 'Fira Mono', monospace;
+	--size_xs: 1rem;
+	--size_sm: 1.3rem;
+	--size_md: 1.6rem;
+	--size_lg: 2.04rem;
+	--size_1: 2.59rem;
+	--size_2: 3.29rem;
+	--size_3: 4.19rem;
+	--size_4: 5.33rem;
+	--size_5: 6.78rem;
+	--size_6: 8.62rem;
+	--size_7: 10.97rem;
+	--size_8: 13.95rem;
+	--size_9: 17.74rem;
+	--link_color: hsl(var(--hue_1), 61%, 35%);
+	--text_decoration: none;
+	--text_decoration_hover: underline;
+	--text_decoration_selected: underline;
+	--link_active: var(--text_color);
+	--spacing_xs5: 0.1rem;
+	--spacing_xs4: 0.2rem;
+	--spacing_xs3: 0.3rem;
+	--spacing_xs2: 0.4rem;
+	--spacing_xs: 0.6rem;
+	--spacing_sm: 0.8rem;
+	--spacing_md: 1rem;
+	--spacing_lg: 1.3rem;
+	--spacing_1: 1.6rem;
+	--spacing_2: 2.1rem;
+	--spacing_3: 2.6rem;
+	--spacing_4: 3.3rem;
+	--spacing_5: 4.2rem;
+	--spacing_6: 5.4rem;
+	--spacing_7: 6.9rem;
+	--spacing_8: 8.7rem;
+	--spacing_9: 11.1rem;
+	--width_md: 800px;
+	--width_sm: 320px;
+	--border_color: var(--border_3);
+	--border_1: hsl(var(--tint_hue), 60%, 20%, 15%);
+	--border_2: hsl(var(--tint_hue), 60%, 20%, 25%);
+	--border_3: hsl(var(--tint_hue), 60%, 20%, 35%);
+	--border_4: hsl(var(--tint_hue), 60%, 20%, 45%);
+	--border_5: hsl(var(--tint_hue), 60%, 20%, 60%);
+	--border_disabled: var(--border_3);
+	--border_width: var(--border_width_1);
+	--border_width_1: 1px;
+	--border_width_2: 2px;
+	--border_width_3: 3px;
+	--border_width_4: 4px;
+	--border_width_5: 6px;
+	--border_width_6: 8px;
+	--border_style: solid;
+	--outline_width: var(--outline_width_1);
+	--outline_width_1: 0;
+	--outline_width_2: var(--border_width_2);
+	--outline_width_3: var(--border_width_1);
+	--outline_style: solid;
+	--outline_color: var(--color_1);
+	--button_bg: var(--fg_1);
+	--button_bg_hover: var(--fg_2);
+	--button_bg_active: var(--bg_3);
+	--button_bg_disabled: transparent;
+	--input_bg: var(--bg_5);
+	--input_padding_y: 0;
+	--input_padding_x: var(--spacing_lg);
+	--input_width_min: 100px;
+	--input_height: var(--spacing_5);
+	--input_height_sm: var(--spacing_4);
+	--input_height_inner: calc(var(--input_height) - 2 * var(--border_width) - 2 * var(--input_padding_y));
+	--box_shadow: 2px 4px 9px hsla(var(--tint_hue), var(--tint_saturation), 7%, 0.28), 2px 14px 48px hsla(var(--tint_hue), var(--tint_saturation), 7%, 0.28);
+	--box_shadow_lg: 2px 6px 14px hsla(var(--tint_hue), var(--tint_saturation), 7%, 0.8), 2px 6px 48px hsla(var(--tint_hue), var(--tint_saturation), 7%, 0.8);
+	--drop_shadow: drop-shadow(var(--box_shadow));
+	--drop_shadow_lg: drop-shadow(var(--box_shadow_lg));
+	--icon_size: var(--icon_size_md);
+	--icon_size_xs: 18px;
+	--icon_size_sm: 32px;
+	--icon_size_md: 48px;
+	--icon_size_lg: 80px;
+	--icon_size_1: 128px;
+	--icon_size_2: 196px;
+	--icon_size_3: 316px;
+	--icon_size_4: 512px;
+	--duration_1: 0.08s;
+	--duration_2: 0.2s;
+	--duration_3: 0.5s;
+	--duration_4: 1s;
+	--duration_5: 1.5s;
+	--duration_6: 3s;
+	--faded_1: 86%;
+	--faded_2: 62%;
+	--faded_3: 38%;
+	--faded_4: 24%;
+	--faded_5: 15%;
+	--faded_6: 9%;
+	--disabled_opacity: var(--faded_1);
+	--border_radius: var(--border_radius_md);
+	--border_radius_md: calc(var(--input_height) / 2);
+	--border_radius_sm: calc(var(--border_radius_md) / 1.618);
+	--border_radius_xs: calc(var(--border_radius_sm) / 1.618);
+	--border_radius_xs2: calc(var(--border_radius_xs) / 1.618);
+}
+#themed_6#themed_6.dark {
+	--color_1: hsl(var(--hue_1), 55%, 75%);
+	--color_2: hsl(var(--hue_2), 45%, 70%);
+	--color_3: hsl(var(--hue_3), 50%, 75%);
+	--color_4: hsl(var(--hue_4), 65%, 75%);
+	--color_5: hsl(var(--hue_5), 50%, 65%);
+	--color_6: hsl(var(--hue_6), 32%, 75%);
+	--color_7: hsl(var(--hue_7), 74%, 76%);
+	--bg: hsl(var(--tint_hue), var(--tint_saturation), 7%);
+	--fg: hsl(var(--tint_hue), var(--tint_saturation), 96%);
+	--bg_1: var(--darken_1);
+	--bg_2: var(--darken_2);
+	--bg_3: var(--darken_3);
+	--bg_4: var(--darken_4);
+	--bg_5: var(--darken_5);
+	--bg_6: var(--darken_6);
+	--bg_7: var(--darken_7);
+	--bg_8: var(--darken_8);
+	--bg_9: var(--darken_9);
+	--fg_1: var(--lighten_1);
+	--fg_2: var(--lighten_2);
+	--fg_3: var(--lighten_3);
+	--fg_4: var(--lighten_4);
+	--fg_5: var(--lighten_5);
+	--fg_6: var(--lighten_6);
+	--fg_7: var(--lighten_7);
+	--fg_8: var(--lighten_8);
+	--fg_9: var(--lighten_9);
+	--text_1: hsl(var(--tint_hue), var(--tint_saturation), 80%);
+	--text_2: hsl(var(--tint_hue), var(--tint_saturation), 65%);
+	--text_3: hsl(var(--tint_hue), var(--tint_saturation), 50%);
+	--text_active: hsl(var(--hue_1), 65%, 65%);;
+	--link_color: hsl(var(--hue_1), 61%, 58%);
+	--border_1: hsl(var(--tint_hue), 60%, 80%, 85%);
+	--border_2: hsl(var(--tint_hue), 60%, 80%, 70%);
+	--border_3: hsl(var(--tint_hue), 60%, 80%, 50%);
+	--border_4: hsl(var(--tint_hue), 60%, 80%, 40%);
+	--border_5: hsl(var(--tint_hue), 60%, 80%, 30%);
+	--box_shadow: 2px 4px 9px hsla(var(--tint_hue), var(--tint_saturation), 82%, var(--faded_5)), 2px 14px 48px hsla(var(--tint_hue), var(--tint_saturation), 82%, var(--faded_5));
+	--box_shadow_lg: 2px 6px 18px hsla(var(--tint_hue), var(--tint_saturation), 82%, var(--faded_5)), 2px 6px 48px hsla(var(--tint_hue), var(--tint_saturation), 82%, var(--faded_5));
+}
+</style><!-- HTML_TAG_END --><!-- HEAD_svelte-1vv27bk_END --><!-- HEAD_svelte-1vv27bk_START --><!-- HTML_TAG_START --><style nonce="%sveltekit.nonce%">
+	#themed_7#themed_7 {
+	--tint_saturation: 8%;
+	--bg: hsl(var(--tint_hue), var(--tint_saturation), 86%);
+}
+#themed_7#themed_7.dark {
+	--bg: hsl(var(--tint_hue), var(--tint_saturation), 18%);
+}
+</style><!-- HTML_TAG_END --><!-- HEAD_svelte-1vv27bk_END --><!-- HEAD_svelte-1vv27bk_START --><!-- HTML_TAG_START --><style nonce="%sveltekit.nonce%">
+	#themed_8#themed_8 {
+	--bg: #fff;
+	--text_1: hsl(var(--tint_hue), var(--tint_saturation), 8%);
+	--text_2: hsl(var(--tint_hue), var(--tint_saturation), 16%);
+	--text_3: hsl(var(--tint_hue), var(--tint_saturation), 24%);
+}
+#themed_8#themed_8.dark {
+	--bg: #000;
+	--text_1: hsl(var(--tint_hue), var(--tint_saturation), 90%);
+	--text_2: hsl(var(--tint_hue), var(--tint_saturation), 83%);
+	--text_3: hsl(var(--tint_hue), var(--tint_saturation), 75%);
+}
+</style><!-- HTML_TAG_END --><!-- HEAD_svelte-1vv27bk_END --><!-- HEAD_svelte-1vv27bk_START --><!-- HTML_TAG_START --><style nonce="%sveltekit.nonce%">
+	#themed_9#themed_9 {
+	--hue_1: 210; /* blue */
+	--color_1: hsl(var(--hue_1), 55%, 50%);
+	--hue_2: 120; /* green, triad with `--color_3` and `--color_4` */
+	--color_2: hsl(var(--hue_2), 55%, 32%); /* same as THEME_COLOR */
+	--hue_3: 251; /* purple, triad with `--color_2` and `--color_4` */
+	--color_3: hsl(var(--hue_3), 50%, 50%);
+	--hue_4: 26; /* orange, triad with `--color_2` and `--color_3` */
+	--color_4: hsl(var(--hue_4), 55%, 50%);
+	--hue_5: 0; /* red */
+	--color_5: hsl(var(--hue_5), 50%, 50%);
+	--hue_6: 32; /* brown */
+	--color_6: hsl(var(--hue_6), 97%, 22%);
+	--hue_7: 335; /* pink */
+	--color_7: hsl(var(--hue_7), 74%, 56%);
+	--darken_1: #0000000f; /* 6% */
+	--darken_2: #0000001f; /* 12% */
+	--darken_3: #00000036; /* 21% */
+	--darken_4: #00000052; /* 32% */
+	--darken_5: #00000073; /* 45% */
+	--darken_6: #000000a6; /* 65% */
+	--darken_7: #000000cc; /* 80% */
+	--darken_8: #000000e3; /* 89% */
+	--darken_9: #000000f5; /* 96% */
+	--lighten_1: #ffffff0f; /* 6% */
+	--lighten_2: #ffffff1f; /* 12% */
+	--lighten_3: #ffffff36; /* 21% */
+	--lighten_4: #ffffff52; /* 32% */
+	--lighten_5: #ffffff73; /* 45% */
+	--lighten_6: #ffffffa6; /* 65% */
+	--lighten_7: #ffffffcc; /* 80% */
+	--lighten_8: #ffffffe3; /* 89% */
+	--lighten_9: #fffffff5; /* 96% */
+	--tint_hue: var(--hue_4);
+	--tint_saturation: 11%;
+	--bg: hsl(var(--tint_hue), var(--tint_saturation), 96%);
+	--fg: hsl(var(--tint_hue), var(--tint_saturation), 7%);
+	--bg_1: var(--lighten_1);
+	--bg_2: var(--lighten_2);
+	--bg_3: var(--lighten_3);
+	--bg_4: var(--lighten_4);
+	--bg_5: var(--lighten_5);
+	--bg_6: var(--lighten_6);
+	--bg_7: var(--lighten_7);
+	--bg_8: var(--lighten_8);
+	--bg_9: var(--lighten_9);
+	--fg_1: var(--darken_1);
+	--fg_2: var(--darken_2);
+	--fg_3: var(--darken_3);
+	--fg_4: var(--darken_4);
+	--fg_5: var(--darken_5);
+	--fg_6: var(--darken_6);
+	--fg_7: var(--darken_7);
+	--fg_8: var(--darken_8);
+	--fg_9: var(--darken_9);
+	--text_color: var(--text_1);
+	--text_1: hsl(var(--tint_hue), var(--tint_saturation), 16%);
+	--text_2: hsl(var(--tint_hue), var(--tint_saturation), 32%);
+	--text_3: hsl(var(--tint_hue), var(--tint_saturation), 48%);
+	--text_disabled: var(--text_3);
+	--text_active: hsl(var(--hue_1), 55%, 40%);;
+	--line_height: var(--line_height_5);
+	--line_height_1: 1;
+	--line_height_2: 1.1;
+	--line_height_3: 1.2;
+	--line_height_4: 1.35;
+	--line_height_5: 1.5;
+	--line_height_6: 1.75;
+	--line_height_7: 2;
+	--font_family: system-ui, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* @source https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+	--font_family_mono: ui-monospace, 'Fira Mono', monospace;
+	--size_xs: 1rem;
+	--size_sm: 1.3rem;
+	--size_md: 1.6rem;
+	--size_lg: 2.04rem;
+	--size_1: 2.59rem;
+	--size_2: 3.29rem;
+	--size_3: 4.19rem;
+	--size_4: 5.33rem;
+	--size_5: 6.78rem;
+	--size_6: 8.62rem;
+	--size_7: 10.97rem;
+	--size_8: 13.95rem;
+	--size_9: 17.74rem;
+	--link_color: hsl(var(--hue_1), 61%, 35%);
+	--text_decoration: none;
+	--text_decoration_hover: underline;
+	--text_decoration_selected: underline;
+	--link_active: var(--text_color);
+	--spacing_xs5: 0.1rem;
+	--spacing_xs4: 0.2rem;
+	--spacing_xs3: 0.3rem;
+	--spacing_xs2: 0.4rem;
+	--spacing_xs: 0.6rem;
+	--spacing_sm: 0.8rem;
+	--spacing_md: 1rem;
+	--spacing_lg: 1.3rem;
+	--spacing_1: 1.6rem;
+	--spacing_2: 2.1rem;
+	--spacing_3: 2.6rem;
+	--spacing_4: 3.3rem;
+	--spacing_5: 4.2rem;
+	--spacing_6: 5.4rem;
+	--spacing_7: 6.9rem;
+	--spacing_8: 8.7rem;
+	--spacing_9: 11.1rem;
+	--width_md: 800px;
+	--width_sm: 320px;
+	--border_color: var(--border_3);
+	--border_1: hsl(var(--tint_hue), 60%, 20%, 15%);
+	--border_2: hsl(var(--tint_hue), 60%, 20%, 25%);
+	--border_3: hsl(var(--tint_hue), 60%, 20%, 35%);
+	--border_4: hsl(var(--tint_hue), 60%, 20%, 45%);
+	--border_5: hsl(var(--tint_hue), 60%, 20%, 60%);
+	--border_disabled: var(--border_3);
+	--border_width: var(--border_width_1);
+	--border_width_1: 1px;
+	--border_width_2: 2px;
+	--border_width_3: 3px;
+	--border_width_4: 4px;
+	--border_width_5: 6px;
+	--border_width_6: 8px;
+	--border_style: solid;
+	--outline_width: var(--outline_width_1);
+	--outline_width_1: 0;
+	--outline_width_2: var(--border_width_2);
+	--outline_width_3: var(--border_width_1);
+	--outline_style: solid;
+	--outline_color: var(--color_1);
+	--button_bg: var(--fg_1);
+	--button_bg_hover: var(--fg_2);
+	--button_bg_active: var(--bg_3);
+	--button_bg_disabled: transparent;
+	--input_bg: var(--bg_5);
+	--input_padding_y: 0;
+	--input_padding_x: var(--spacing_lg);
+	--input_width_min: 100px;
+	--input_height: var(--spacing_5);
+	--input_height_sm: var(--spacing_4);
+	--input_height_inner: calc(var(--input_height) - 2 * var(--border_width) - 2 * var(--input_padding_y));
+	--box_shadow: 2px 4px 9px hsla(var(--tint_hue), var(--tint_saturation), 7%, 0.28), 2px 14px 48px hsla(var(--tint_hue), var(--tint_saturation), 7%, 0.28);
+	--box_shadow_lg: 2px 6px 14px hsla(var(--tint_hue), var(--tint_saturation), 7%, 0.8), 2px 6px 48px hsla(var(--tint_hue), var(--tint_saturation), 7%, 0.8);
+	--drop_shadow: drop-shadow(var(--box_shadow));
+	--drop_shadow_lg: drop-shadow(var(--box_shadow_lg));
+	--icon_size: var(--icon_size_md);
+	--icon_size_xs: 18px;
+	--icon_size_sm: 32px;
+	--icon_size_md: 48px;
+	--icon_size_lg: 80px;
+	--icon_size_1: 128px;
+	--icon_size_2: 196px;
+	--icon_size_3: 316px;
+	--icon_size_4: 512px;
+	--duration_1: 0.08s;
+	--duration_2: 0.2s;
+	--duration_3: 0.5s;
+	--duration_4: 1s;
+	--duration_5: 1.5s;
+	--duration_6: 3s;
+	--faded_1: 86%;
+	--faded_2: 62%;
+	--faded_3: 38%;
+	--faded_4: 24%;
+	--faded_5: 15%;
+	--faded_6: 9%;
+	--disabled_opacity: var(--faded_1);
+	--border_radius: var(--border_radius_md);
+	--border_radius_md: calc(var(--input_height) / 2);
+	--border_radius_sm: calc(var(--border_radius_md) / 1.618);
+	--border_radius_xs: calc(var(--border_radius_sm) / 1.618);
+	--border_radius_xs2: calc(var(--border_radius_xs) / 1.618);
+}
+#themed_9#themed_9.dark {
+	--color_1: hsl(var(--hue_1), 55%, 75%);
+	--color_2: hsl(var(--hue_2), 45%, 70%);
+	--color_3: hsl(var(--hue_3), 50%, 75%);
+	--color_4: hsl(var(--hue_4), 65%, 75%);
+	--color_5: hsl(var(--hue_5), 50%, 65%);
+	--color_6: hsl(var(--hue_6), 32%, 75%);
+	--color_7: hsl(var(--hue_7), 74%, 76%);
+	--bg: hsl(var(--tint_hue), var(--tint_saturation), 7%);
+	--fg: hsl(var(--tint_hue), var(--tint_saturation), 96%);
+	--bg_1: var(--darken_1);
+	--bg_2: var(--darken_2);
+	--bg_3: var(--darken_3);
+	--bg_4: var(--darken_4);
+	--bg_5: var(--darken_5);
+	--bg_6: var(--darken_6);
+	--bg_7: var(--darken_7);
+	--bg_8: var(--darken_8);
+	--bg_9: var(--darken_9);
+	--fg_1: var(--lighten_1);
+	--fg_2: var(--lighten_2);
+	--fg_3: var(--lighten_3);
+	--fg_4: var(--lighten_4);
+	--fg_5: var(--lighten_5);
+	--fg_6: var(--lighten_6);
+	--fg_7: var(--lighten_7);
+	--fg_8: var(--lighten_8);
+	--fg_9: var(--lighten_9);
+	--text_1: hsl(var(--tint_hue), var(--tint_saturation), 80%);
+	--text_2: hsl(var(--tint_hue), var(--tint_saturation), 65%);
+	--text_3: hsl(var(--tint_hue), var(--tint_saturation), 50%);
+	--text_active: hsl(var(--hue_1), 65%, 65%);;
+	--link_color: hsl(var(--hue_1), 61%, 58%);
+	--border_1: hsl(var(--tint_hue), 60%, 80%, 85%);
+	--border_2: hsl(var(--tint_hue), 60%, 80%, 70%);
+	--border_3: hsl(var(--tint_hue), 60%, 80%, 50%);
+	--border_4: hsl(var(--tint_hue), 60%, 80%, 40%);
+	--border_5: hsl(var(--tint_hue), 60%, 80%, 30%);
+	--box_shadow: 2px 4px 9px hsla(var(--tint_hue), var(--tint_saturation), 82%, var(--faded_5)), 2px 14px 48px hsla(var(--tint_hue), var(--tint_saturation), 82%, var(--faded_5));
+	--box_shadow_lg: 2px 6px 18px hsla(var(--tint_hue), var(--tint_saturation), 82%, var(--faded_5)), 2px 6px 48px hsla(var(--tint_hue), var(--tint_saturation), 82%, var(--faded_5));
+}
+</style><!-- HTML_TAG_END --><!-- HEAD_svelte-1vv27bk_END --><!-- HEAD_svelte-1vv27bk_START --><!-- HTML_TAG_START --><style nonce="%sveltekit.nonce%">
+	#themed_10#themed_10 {
+	--tint_saturation: 8%;
+	--bg: hsl(var(--tint_hue), var(--tint_saturation), 86%);
+}
+#themed_10#themed_10.dark {
+	--bg: hsl(var(--tint_hue), var(--tint_saturation), 18%);
+}
+</style><!-- HTML_TAG_END --><!-- HEAD_svelte-1vv27bk_END --><!-- HEAD_svelte-1vv27bk_START --><!-- HTML_TAG_START --><style nonce="%sveltekit.nonce%">
+	#themed_11#themed_11 {
+	--bg: #fff;
+	--text_1: hsl(var(--tint_hue), var(--tint_saturation), 8%);
+	--text_2: hsl(var(--tint_hue), var(--tint_saturation), 16%);
+	--text_3: hsl(var(--tint_hue), var(--tint_saturation), 24%);
+}
+#themed_11#themed_11.dark {
+	--bg: #000;
+	--text_1: hsl(var(--tint_hue), var(--tint_saturation), 90%);
+	--text_2: hsl(var(--tint_hue), var(--tint_saturation), 83%);
+	--text_3: hsl(var(--tint_hue), var(--tint_saturation), 75%);
+}
+</style><!-- HTML_TAG_END --><!-- HEAD_svelte-1vv27bk_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">    <main class="box width_full"><nav class="svelte-8vqw42"><div class="breadcrumb svelte-g6c005"> <a href=".." class="svelte-g6c005"><span class="icon svelte-8vqw42" data-svelte-h="svelte-kyn2zi">🧶</span></a><span class="separator svelte-g6c005">/</span><a href="../library" class="svelte-g6c005">library</a><span class="separator svelte-g6c005">/</span><a href="../library/theme" class="svelte-g6c005 selected">theme</a> </div></nav> <div class="layout width_md svelte-1t1iie2"><div class="menu_wrapper svelte-1t1iie2"><div class="menu width_sm svelte-1t1iie2"><div><div class="library_panel panel svelte-1pvo4dg"><div class="library_menu svelte-cvsxkq"> <h6 class="svelte-cvsxkq">styles</h6>  <menu class="svelte-cvsxkq"><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq selected" href="../library/theme">theme</a> </li><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/elements">elements</a> </li><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/forms">forms</a> </li><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/icon_sizes">icon sizes</a> </li><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/prose">prose</a> </li><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/typography">typography</a> </li><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/variables">variables</a> </li> </menu></div>  </div> </div> <div><div class="library_panel panel svelte-1pvo4dg"><div class="library_menu svelte-cvsxkq"><h6 class="svelte-1t1iie2">related styles</h6> <menu class="svelte-cvsxkq"><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/icon_sizes">icon sizes</a> </li><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/typography">typography</a> </li><li role="none" class="svelte-cvsxkq"><a class="menu_item svelte-cvsxkq" href="../library/variables">variables</a> </li> </menu></div>  </div> </div></div></div> <div class="library_panel panel svelte-1pvo4dg"><div class="package_summary svelte-1dr3nnd"> <header class="spaced"><div class="repo_name svelte-1dr3nnd">fuz</div></header> <blockquote class="spaced text_align_center">design system for CSS, Svelte, and SvelteKit</blockquote> <div class="spaced"><a class="chip svelte-1dr3nnd" href="https://www.fuz.dev/">fuz.dev</a></div> <div class="box row spaced"><a class="chip svelte-1dr3nnd" href="https://github.com/fuz-dev/fuz">repo</a> <a class="chip svelte-1dr3nnd" title="version" href="https://github.com/fuz-dev/fuz/blob/main/CHANGELOG.md">0.81.0</a> <a class="chip svelte-1dr3nnd" href="https://www.npmjs.com/package/@fuz.dev/fuz">npm</a></div> <blockquote class="npm_url svelte-1dr3nnd">npm i -D @fuz.dev/fuz</blockquote> </div>  </div> <div class="library_panel panel svelte-1pvo4dg"><header class="svelte-sr4458"> <h2 class="box" id="theme">theme</h2> </header> <section class="theme box panel svelte-eu3gd3"><div class="prose width_sm"><p data-svelte-h="svelte-104a95l"><code>Themed</code> adds global support for both the browser&#39;s
+				<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme">color-scheme</a></code>
+				and custom themes based on
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>. <code>Themed</code> is a singleton component that&#39;s mounted at the top-level of the page:</p> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token keyword">import</span> Themed <span class="token keyword">from</span>
+	<span class="token string">'@fuz.dev/fuz/Themed.svelte'</span><span class="token punctuation">;</span><!-- HTML_TAG_END --></code></pre> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token comment">&lt;!-- +layout.svelte --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Themed</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Themed</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></code></pre> <details data-svelte-h="svelte-11pwhsh"><summary>why the singleton?</summary> <aside><p>By default <code>Themed</code> syncs its settings to the global <code>:root</code> tag
+						and persists to <code>localStorage</code>.</p> <p>These behaviors can be customized with its props:</p> <ul><li><code>sync_color_scheme</code></li> <li><code>load_color_scheme</code></li> <li><code>save_color_scheme</code></li> <li><code>load_theme</code></li> <li><code>save_theme</code></li></ul> <p>See <code>Themed_Scope</code> below to theme one branch of the DOM tree.</p></aside></details> <details><summary data-svelte-h="svelte-swsl3y">why nest the slot?</summary> <aside><p data-svelte-h="svelte-d79wrn"><code>Themed</code> is designed to wrap every page at the top level so it can provide
+						the selected theme and color scheme in the Svelte context. It works without a slot, but
+						<code>get_theme</code> and <code>get_color_scheme</code> will fail unless you call
+						<code>set_theme</code> and <code>set_color_scheme</code> yourself.</p> <p data-svelte-h="svelte-zjouds">These context helpers provide the <code>writable</code> stores to your code, and they also
+						reduce boilerplate in the helper components documented below.</p> <p data-svelte-h="svelte-maq1o5">If you set stores in context manually, they must be the same references as the <code>Themed</code> props:</p> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">const</span> theme <span class="token operator">=</span> <span class="token function">writable</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">const</span> color_scheme <span class="token operator">=</span> <span class="token function">writable</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">set_theme</span><span class="token punctuation">(</span>theme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">set_color_scheme</span><span class="token punctuation">(</span>color_scheme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Themed</span>
+	<span class="token attr-name">selected_theme=</span><span class="token language-javascript"><span class="token punctuation">{</span>theme<span class="token punctuation">}</span></span>
+	<span class="token attr-name">selected_color_scheme=</span><span class="token language-javascript"><span class="token punctuation">{</span>color_scheme<span class="token punctuation">}</span></span>
+<span class="token punctuation">/></span></span>
+<span class="token comment">&lt;!-- sibling content... --></span><!-- HTML_TAG_END --></code></pre></aside></details></div></section> <section class="theme box panel svelte-eu3gd3"><div class="prose width_sm"><h3 class="text_align_center" data-svelte-h="svelte-1m9d8l2">color scheme</h3> <p data-svelte-h="svelte-1fusbcm"><code>Themed</code> defaults to automatic
+				<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme">color-scheme</a></code>
+				detection with
+				<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code>, and users can also set it directly:</p>  <menu class="color_scheme_control svelte-f0hu94"> <button class="color_scheme svelte-f0hu94" type="button" role="menuitemradio" title="select light color scheme" aria-checked="false"><div class="content svelte-f0hu94">light</div> </button> <button class="color_scheme svelte-f0hu94" type="button" role="menuitemradio" title="select auto color scheme" aria-checked="false"><div class="content svelte-f0hu94">auto</div> </button> <button class="color_scheme svelte-f0hu94" type="button" role="menuitemradio" title="select dark color scheme" aria-checked="false"><div class="content svelte-f0hu94">dark</div> </button> </menu> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token keyword">import</span> Color_Scheme_Input <span class="token keyword">from</span>
+	<span class="token string">'@fuz.dev/fuz/Color_Scheme_Input.svelte'</span><span class="token punctuation">;</span><!-- HTML_TAG_END --></code></pre> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Color_Scheme_Input</span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END --></code></pre> <p data-svelte-h="svelte-1v0x0kk">Pass a prop to override the default:</p> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Color_Scheme_Input</span>
+	<span class="token attr-name">selected_color_scheme=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token function">writable</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+<span class="token punctuation">/></span></span><!-- HTML_TAG_END --></code></pre> <p data-svelte-h="svelte-4d6lcf">The builtin themes support both dark and light color schemes. Custom themes may support one
+				or both color schemes.</p> <details data-svelte-h="svelte-1us70xs"><summary>more about <code>Color_Scheme_Input</code></summary> <aside><p><code>Color_Scheme_Input</code> enables users to choose and persist the color scheme without
+						boilerplate.</p> <p>By default, <code>Color_Scheme_Input</code> works with <code>Themed</code> to save the
+						user&#39;s preference to <code>localStorage</code>. To customize this behavior, pass a
+						custom
+						<code>selected_color_scheme</code>
+						or <code>select</code> function prop.</p></aside></details></div></section> <section class="theme box panel svelte-eu3gd3"><div class="prose width_sm"><h3 class="text_align_center" data-svelte-h="svelte-x52c6i">themes</h3> <p>A theme is a simple JSON collection of <code><a href="../library/variables">variables</a></code> that can be transformed
+				into CSS that set
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" data-svelte-h="svelte-gysof">CSS variables</a>. Each variable can have values for light and/or dark color schemes.</p> <aside data-svelte-h="svelte-1cjsqq1">The builtin themes need more work, but the proof of concept is ready!</aside>  <menu class="theme_input svelte-zgyhxt">  <li role="none" class="svelte-zgyhxt"><button type="button" class="theme_button svelte-zgyhxt selected" role="menuitemradio" aria-label="base theme" aria-checked="true">base</button> <button type="button" class="icon_button plain" data-svelte-h="svelte-1br9t0k">•••</button> </li>  <li role="none" class="svelte-zgyhxt"><button type="button" class="theme_button svelte-zgyhxt" role="menuitemradio" aria-label="low contrast theme" aria-checked="false">low contrast</button> <button type="button" class="icon_button plain" data-svelte-h="svelte-1br9t0k">•••</button> </li>  <li role="none" class="svelte-zgyhxt"><button type="button" class="theme_button svelte-zgyhxt" role="menuitemradio" aria-label="high contrast theme" aria-checked="false">high contrast</button> <button type="button" class="icon_button plain" data-svelte-h="svelte-1br9t0k">•••</button> </li> </menu> <button class="spaced" disabled data-svelte-h="svelte-geoqav">create a new theme (todo)</button> <aside data-svelte-h="svelte-y5bhyq">Editing themes at runtime is a work in progress, but please click around to see where we&#39;re
+				going!</aside></div></section> <section class="theme box panel svelte-eu3gd3"><div class="spaced prose width_sm" data-svelte-h="svelte-9bsdjj"><h3 class="text_align_center">scoped themes</h3></div> <details><summary data-svelte-h="svelte-122i6u1">⚠️ scoped themes are a work in progress</summary> <div class="spaced prose width_sm"><p data-svelte-h="svelte-ejrviy">Scope a theme to one branch of the DOM tree with <code>Themed_Scope</code>:</p> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token keyword">import</span> Themed_Scope <span class="token keyword">from</span>
+	<span class="token string">'@fuz.dev/fuz/Themed_Scope.svelte'</span><span class="token punctuation">;</span><!-- HTML_TAG_END --></code></pre> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Themed_Scope</span> <span class="token language-javascript"><span class="token punctuation">{</span>selected_theme<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+		...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Themed_Scope</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></code></pre></div> <div>     <div id="themed_6" class="themed"><div class="box row padded_sm"><button type="button" class="icon_button">☆</button> <div class="padded_md" style="flex: 1;">the <code>base</code> theme
+							</div></div> </div>    <div id="themed_7" class="themed"><div class="box row padded_sm"><button type="button" class="icon_button">☆</button> <div class="padded_md" style="flex: 1;">the <code>low contrast</code> theme
+							</div></div> </div>    <div id="themed_8" class="themed"><div class="box row padded_sm"><button type="button" class="icon_button">☆</button> <div class="padded_md" style="flex: 1;">the <code>high contrast</code> theme
+							</div></div> </div>     <div id="themed_9" class="themed dark"><div class="box row padded_sm"><button type="button" class="icon_button">☆</button> <div class="padded_md" style="flex: 1;">the <code>base</code> theme
+							</div></div> </div>    <div id="themed_10" class="themed dark"><div class="box row padded_sm"><button type="button" class="icon_button">☆</button> <div class="padded_md" style="flex: 1;">the <code>low contrast</code> theme
+							</div></div> </div>    <div id="themed_11" class="themed dark"><div class="box row padded_sm"><button type="button" class="icon_button">☆</button> <div class="padded_md" style="flex: 1;">the <code>high contrast</code> theme
+							</div></div> </div></div></details></section> <section class="theme panel prose svelte-eu3gd3"><h3 class="text_align_center" data-svelte-h="svelte-1nm1qmo">theme usage</h3> <p data-svelte-h="svelte-19e04kp">Themes are plain CSS that can be sourced in a variety of ways.</p> <p data-svelte-h="svelte-j0d4hl">To use fuz&#39;s base theme:</p> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token comment">&lt;!-- +layout.svelte --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+	import '@fuz.dev/fuz/style.css';
+	import '@fuz.dev/fuz/theme.css';
+	import Themed from '@fuz.dev/fuz/Themed.svelte';
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- enable theme and color-scheme support --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Themed</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Themed</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></code></pre> <p data-svelte-h="svelte-16lecaf"><code>Themed</code> can be customized with the nonreactive, bindable, writable store props
+			<code>selected_theme</code>
+			and <code>selected_color_scheme</code>:</p> <pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Themed</span> <span class="token language-javascript"><span class="token punctuation">{</span>selected_theme<span class="token punctuation">}</span></span> <span class="token language-javascript"><span class="token punctuation">{</span>selected_color_scheme<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Themed</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></code></pre> <p data-svelte-h="svelte-ywvtxn"><code>Themed</code> sets the writable stores <code>selected_theme</code>
+			and <code>selected_color_scheme</code> in the Svelte context:</p> <div class="width_full"><pre class=" svelte-1nyqt33"><code class="svelte-1nyqt33"><!-- HTML_TAG_START --><span class="token comment">// get values from the Svelte context provided by</span>
+<span class="token comment">// the nearest `Themed` or `Themed_Scope` ancestor:</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>get_theme<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@fuz.dev/fuz/theme.js'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> selected_theme <span class="token operator">=</span> <span class="token function">get_theme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+$selected_theme<span class="token punctuation">.</span>name<span class="token punctuation">;</span> <span class="token comment">// 'base'</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>get_color_scheme<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@fuz.dev/fuz/theme.js'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> selected_color_scheme <span class="token operator">=</span> <span class="token function">get_color_scheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+$selected_color_scheme<span class="token punctuation">;</span> <span class="token comment">// 'null'</span><!-- HTML_TAG_END --></code></pre></div> <p data-svelte-h="svelte-1lcsr8g"><details><summary>more about <code>Themed</code></summary> <aside><p><code>Themed</code> initializes the system&#39;s theme support. Without it, the page will
+						not reflect the user&#39;s system
+						<code>color-scheme</code>. By default, <code>Themed</code> applies the base theme to the
+						root of the page via <code>create_theme_setup_script</code>. It uses JS to add the
+						<code>.dark</code> CSS class to the <code>:root</code> element.</p> <p>This strategy enables color scheme and theme support with minimal CSS and optimal
+						performance for most use cases. The system supports plain CSS usage that can be static
+						or dynamic, scoped or global, or imported at buildtime or runtime. It also allows
+						runtime access to the data if you want to pay the performance costs.</p> <p>The theme setup script interacts with <code>sync_color_scheme</code> to save the user&#39;s
+						preference to <code>localStorage</code>. See also <code>Color_Scheme_Input</code>.</p> <p>The setup script avoids flash-on-load due to color scheme, but currently themes flash in
+						after loading. We&#39;ll try to fix this when the system stabilizes.</p></aside></details></p></section> <section class="panel prose padded_md svelte-eu3gd3"><div class="style_examples svelte-2hrgav"><h1>theme: base</h1> <div class="prose"><h2 data-svelte-h="svelte-3kcb0c">this is an <code>h2</code> inside <code>.prose</code></h2> <blockquote data-svelte-h="svelte-ow8ry3">blockquote</blockquote> <aside data-svelte-h="svelte-1fxuop8">aside</aside> <ul data-svelte-h="svelte-ngwnby"><li>a</li> <li>b</li> <li>c</li></ul> <p data-svelte-h="svelte-3g1n6d">p and <code>code</code> with
+			<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">links</a></p> <p class="width_sm" data-svelte-h="svelte-o85a2f">another p with <code>.width_sm</code> so it will wrap any moment now and there we have multiple
+				lines of text
+			</p><p class="width_sm" data-svelte-h="svelte-o85a2f">another p with <code>.width_sm</code> so it will wrap any moment now and there we have multiple
+				lines of text
+			</p><p class="width_sm" data-svelte-h="svelte-o85a2f">another p with <code>.width_sm</code> so it will wrap any moment now and there we have multiple
+				lines of text
+			</p> <details data-svelte-h="svelte-1tijz9p"><summary>summary and details</summary>
+			details content</details></div> <hr> <h2 data-svelte-h="svelte-1fow1pz"><code>form</code></h2> <form><fieldset><legend data-svelte-h="svelte-10jlsfe">a <code>legend</code> in a <code>fieldset</code></legend> <label><div class="title" data-svelte-h="svelte-1idaxax">input</div> <input placeholder=">" value=""></label> <label><div class="title" data-svelte-h="svelte-1890gr3">disabled input</div> <input type="password" disabled placeholder=">" value=""></label> <label><div class="title" data-svelte-h="svelte-1ioz9p5">textarea</div> <textarea placeholder="👀"></textarea></label> <label data-svelte-h="svelte-qenhjx"><div class="title">disabled textarea</div> <textarea disabled placeholder=">"></textarea></label> <select class="text_align_center" style="font-size: var(--size_5)"><option value="😊">😊</option><option value="😑">😑</option><option value="🤔">🤔</option><option value="😉">😉</option></select> <select class="text_align_center" style="font-size: var(--size_5)" disabled><option value="😊">😊</option><option value="😑">😑</option><option value="🤔">🤔</option><option value="😉">😉</option></select></fieldset> <fieldset data-svelte-h="svelte-19sljwv"><input type="range" step="1" min="0" max="100"></fieldset> <fieldset data-svelte-h="svelte-tzj8n1"><input type="range" step="1" min="0" max="100" disabled></fieldset> <fieldset class="row wrap box"><label class="row"><input type="checkbox" style="margin-right: var(--spacing_lg);"></label> <label class="row"><input type="checkbox" style="margin-right: var(--spacing_lg);" checked></label> <label class="row disabled"><input type="checkbox" disabled style="margin-right: var(--spacing_lg);"></label> <label class="row disabled" data-svelte-h="svelte-1t669t6"><input type="checkbox" checked disabled></label>  <label class="row selected"><input type="radio" value="a radio input" checked> </label> <label class="row"><input type="radio" value="another radio input"> </label> <label class="row disabled" data-svelte-h="svelte-1jiijv9"><input type="radio" disabled></label> <label class="row disabled selected" style="margin-bottom: var(--spacing_lg);" data-svelte-h="svelte-bhorme"><input type="radio" checked disabled></label></fieldset></form> <div class="row box" data-svelte-h="svelte-196pj0"><button disabled>:|</button> <button disabled>a bigger disabled button</button></div> <nav class="svelte-2hrgav"><button class="svelte-2hrgav" data-svelte-h="svelte-1sqs30e">button 0</button> <button class="svelte-2hrgav selected" data-svelte-h="svelte-1nh1b6h">button 1</button> <button class="svelte-2hrgav" data-svelte-h="svelte-1xb4mkc">button 2</button></nav> <button class="selected" data-svelte-h="svelte-1mqtbmk">a button with the <code>.selected</code> class</button> <button class="selected deselectable" data-svelte-h="svelte-1xzesiz">a <code>.deselectable</code> <code>.selected</code> button</button><button class="selected deselectable" disabled data-svelte-h="svelte-hmi39">disabled <code>.deselectable</code> <code>.selected</code></button> <div class="row wrap box" data-svelte-h="svelte-1569og2"><button class="plain">+</button> <button class="icon_button">+</button> <button class="plain icon_button">+</button> <button class="plain" disabled>+</button> <button class="icon_button" disabled>+</button> <button class="plain icon_button" disabled>+</button> <button class="plain selected">+</button> <button class="icon_button selected">+</button> <button class="plain icon_button selected">+</button> <button class="plain selected deselectable">+</button> <button class="icon_button selected deselectable">+</button> <button class="plain icon_button selected deselectable">+</button></div> <label class="buttonlike padded_md row box" data-svelte-h="svelte-f4lmap"><input type="checkbox"> <div class="padded_sm">this entire thing is buttonlike, not just the checkbox</div></label> <label class="buttonlike padded_md row box disabled" data-svelte-h="svelte-1vy5gfv"><input type="checkbox" disabled> <div class="padded_sm">this is a <code>.disabled</code> buttonlike</div></label> <div class="buttonlike selected padded_md" data-svelte-h="svelte-1b436k2"><code>.buttonlike</code> with <code>.selected</code></div> <div class="buttonlike deselectable selected padded_md" data-svelte-h="svelte-stmc9a"><code>.buttonlike</code> with <code>.selected</code> and <code>.deselectable</code></div> </div></section> </div>   <section class="box svelte-1t1iie2"><footer class="panel padded_lg svelte-1o3q16b"> <div class="logo svelte-1o3q16b"><a href="https://github.com/fuz-dev/fuz" rel="me" class="svelte-1o3q16b"><svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub icon" viewBox="0 0 1024 1024" fill="none" style="width: var(--spacing_7, 64px); height: var(--spacing_7, 64px);"><path fill="var(--color, #000)" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02
+		15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32
+		12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12
+		11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33
+		11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74
+		5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95
+		7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31
+		12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12
+		7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01
+		13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71
+		14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)"></path></svg></a></div>  </footer></section> <section class="box svelte-1t1iie2"><div class="breadcrumb svelte-g6c005"> <a href=".." class="svelte-g6c005">🧶</a><span class="separator svelte-g6c005">/</span><a href="../library" class="svelte-g6c005">library</a><span class="separator svelte-g6c005">/</span><a href="../library/theme" class="svelte-g6c005 selected">theme</a> </div></section></div> </main>  
+			
+			<script>
+				{
+					__sveltekit_1q1975g = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: null
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.LFqsxc9F.js"),
+						import("../_app/immutable/entry/app.A26FhUI8.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 14],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

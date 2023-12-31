@@ -1,0 +1,171 @@
+{
+  "name": "@fuz.dev/fuz",
+  "version": "0.81.0",
+  "modules": {
+    "./Color_Scheme_Input.svelte": {
+      "path": "Color_Scheme_Input.svelte",
+      "declarations": []
+    },
+    "./deployments.json": {
+      "path": "deployments.json",
+      "declarations": []
+    },
+    "./deployments.task.js": {
+      "path": "deployments.task.ts",
+      "declarations": []
+    },
+    "./orc.task.js": {
+      "path": "orc.task.ts",
+      "declarations": []
+    },
+    "./style.css": {
+      "path": "style.css",
+      "declarations": []
+    },
+    "./swallow.js": {
+      "path": "swallow.ts",
+      "declarations": [
+        {
+          "name": "swallow",
+          "kind": "function"
+        }
+      ]
+    },
+    "./Theme_Input.svelte": {
+      "path": "Theme_Input.svelte",
+      "declarations": []
+    },
+    "./theme.css": {
+      "path": "theme.css",
+      "declarations": []
+    },
+    "./theme.gen.css.js": {
+      "path": "theme.gen.css.ts",
+      "declarations": [
+        {
+          "name": "gen",
+          "kind": "variable"
+        }
+      ]
+    },
+    "./theme.js": {
+      "path": "theme.ts",
+      "declarations": [
+        {
+          "name": "Color_Scheme",
+          "kind": "type"
+        },
+        {
+          "name": "color_schemes",
+          "kind": "variable"
+        },
+        {
+          "name": "THEME_COLOR",
+          "kind": "variable"
+        },
+        {
+          "name": "sync_color_scheme",
+          "kind": "function"
+        },
+        {
+          "name": "COLOR_SCHEME_STORAGE_KEY",
+          "kind": "variable"
+        },
+        {
+          "name": "save_color_scheme",
+          "kind": "function"
+        },
+        {
+          "name": "load_color_scheme",
+          "kind": "function"
+        },
+        {
+          "name": "THEME_STORAGE_KEY",
+          "kind": "variable"
+        },
+        {
+          "name": "save_theme",
+          "kind": "function"
+        },
+        {
+          "name": "load_theme",
+          "kind": "function"
+        },
+        {
+          "name": "create_theme_setup_script",
+          "kind": "function"
+        },
+        {
+          "name": "create_theme_style_html",
+          "kind": "function"
+        },
+        {
+          "name": "Theme",
+          "kind": "type"
+        },
+        {
+          "name": "Theme_Variable",
+          "kind": "type"
+        },
+        {
+          "name": "Render_Theme_Style_Options",
+          "kind": "type"
+        },
+        {
+          "name": "render_theme_style",
+          "kind": "function"
+        },
+        {
+          "name": "render_theme_variable",
+          "kind": "function"
+        },
+        {
+          "name": "get_theme",
+          "kind": "function"
+        },
+        {
+          "name": "set_theme",
+          "kind": "function"
+        },
+        {
+          "name": "get_color_scheme",
+          "kind": "function"
+        },
+        {
+          "name": "set_color_scheme",
+          "kind": "function"
+        }
+      ]
+    },
+    "./Themed_Scope.svelte": {
+      "path": "Themed_Scope.svelte",
+      "declarations": []
+    },
+    "./Themed.svelte": {
+      "path": "Themed.svelte",
+      "declarations": []
+    },
+    "./themes.js": {
+      "path": "themes.ts",
+      "declarations": [
+        {
+          "name": "DEFAULT_THEME",
+          "kind": "variable"
+        },
+        {
+          "name": "default_themes",
+          "kind": "variable"
+        }
+      ]
+    },
+    "./variables.js": {
+      "path": "variables.ts",
+      "declarations": [
+        {
+          "name": "default_variables",
+          "kind": "variable"
+        }
+      ]
+    }
+  }
+}
